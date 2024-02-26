@@ -1,0 +1,352 @@
+Feb 25 05:59:13 ubuntu-23 netclient[24035]: [netclient] 2024-02-25 05:59:13 checkin routine closed
+Feb 25 05:59:13 ubuntu-23 netclient[24035]: [netclient] 2024-02-25 05:59:13 closed endpoint detection
+Feb 25 05:59:13 ubuntu-23 systemd[1]: Stopping netclient.service - Netclient Daemon...
+Feb 25 05:59:14 ubuntu-23 systemd[1]: netclient.service: Deactivated successfully.
+Feb 25 05:59:14 ubuntu-23 systemd[1]: Stopped netclient.service - Netclient Daemon.
+Feb 25 05:59:14 ubuntu-23 systemd[1]: netclient.service: Consumed 4.704s CPU time.
+-- Boot e1cb71ce740b43c78349d95428241c1e --
+Feb 25 05:59:40 ubuntu-23 systemd[1]: Starting netclient.service - Netclient Daemon...
+Feb 25 05:59:57 ubuntu-23 systemd[1]: Started netclient.service - Netclient Daemon.
+Feb 25 05:59:57 ubuntu-23 netclient[841]: daemon called
+Feb 25 05:59:57 ubuntu-23 netclient[841]: [netclient] 2024-02-25 05:59:57 Starting firewall...
+Feb 25 05:59:57 ubuntu-23 netclient[841]: [netclient] 2024-02-25 05:59:57 iptables is supported
+Feb 25 05:59:57 ubuntu-23 netclient[841]: [netclient] 2024-02-25 05:59:57 adding forwarding rule
+Feb 25 05:59:58 ubuntu-23 netclient[841]: completed pull for server nm.188-166-182-181.nip.io
+Feb 25 05:59:58 ubuntu-23 netclient[841]: [netclient] 2024-02-25 05:59:58 adding addresses to netmaker interface
+Feb 25 05:59:58 ubuntu-23 netclient[841]: [netclient] 2024-02-25 05:59:58 initialized endpoint detection on port 51821
+Feb 25 06:00:02 ubuntu-23 netclient[841]: [netclient] 2024-02-25 06:00:02 determined new endpoint for peer rYaboxRjMDkzz5tjtcOjObX9Lpxiao42bh/sZNvIYG8= - 10.126.0.5:51821
+Feb 25 06:00:02 ubuntu-23 netclient[841]: [netclient] 2024-02-25 06:00:02 determined new endpoint for peer IprfZdXbNM/dSspvHZIX7+yafjESSIYkPwRe9CswKWQ= - 10.126.0.6:51821
+Feb 25 06:00:02 ubuntu-23 netclient[841]: [netclient] 2024-02-25 06:00:02 determined new endpoint for peer B1EPi/UT+5/2HnCp7i28eGvgwr0+jcatzN6pug8JFHo= - 10.126.0.4:51821
+Feb 25 06:00:03 ubuntu-23 netclient[841]: [netclient] 2024-02-25 06:00:03 determined new endpoint for peer rYaboxRjMDkzz5tjtcOjObX9Lpxiao42bh/sZNvIYG8= - 10.126.0.5:51821
+Feb 25 06:00:03 ubuntu-23 netclient[841]: [netclient] 2024-02-25 06:00:03 determined new endpoint for peer B1EPi/UT+5/2HnCp7i28eGvgwr0+jcatzN6pug8JFHo= - 10.126.0.4:51821
+Feb 25 06:00:03 ubuntu-23 netclient[841]: [netclient] 2024-02-25 06:00:03 determined new endpoint for peer IprfZdXbNM/dSspvHZIX7+yafjESSIYkPwRe9CswKWQ= - 10.126.0.6:51821
+Feb 25 06:30:39 ubuntu-23 systemd[1]: Stopping netclient.service - Netclient Daemon...
+Feb 25 06:30:39 ubuntu-23 netclient[841]: [netclient] 2024-02-25 06:30:39 checkin routine closed
+Feb 25 06:30:39 ubuntu-23 netclient[841]: [netclient] 2024-02-25 06:30:39 closed endpoint detection
+Feb 25 06:30:40 ubuntu-23 systemd[1]: netclient.service: Deactivated successfully.
+Feb 25 06:30:40 ubuntu-23 systemd[1]: Stopped netclient.service - Netclient Daemon.
+Feb 25 06:30:40 ubuntu-23 systemd[1]: netclient.service: Consumed 4.835s CPU time.
+-- Boot 17d13ec8d3a44e3c8f6678e7efbc59c9 --
+Feb 25 06:32:07 ubuntu-23 systemd[1]: Starting netclient.service - Netclient Daemon...
+Feb 25 06:32:24 ubuntu-23 systemd[1]: Started netclient.service - Netclient Daemon.
+Feb 25 06:32:24 ubuntu-23 netclient[841]: daemon called
+Feb 25 06:32:24 ubuntu-23 netclient[841]: [netclient] 2024-02-25 06:32:24 Starting firewall...
+Feb 25 06:32:24 ubuntu-23 netclient[841]: [netclient] 2024-02-25 06:32:24 iptables is supported
+Feb 25 06:32:24 ubuntu-23 netclient[841]: [netclient] 2024-02-25 06:32:24 adding forwarding rule
+Feb 25 06:32:26 ubuntu-23 netclient[841]: completed pull for server nm.188-166-182-181.nip.io
+Feb 25 06:32:26 ubuntu-23 netclient[841]: [netclient] 2024-02-25 06:32:26 adding addresses to netmaker interface
+Feb 25 06:32:26 ubuntu-23 netclient[841]: [netclient] 2024-02-25 06:32:26 initialized endpoint detection on port 51821
+Feb 25 06:57:07 ubuntu-23 netclient[841]: [netclient] 2024-02-25 06:57:07 checkin routine closed
+Feb 25 06:57:07 ubuntu-23 netclient[841]: [netclient] 2024-02-25 06:57:07 closed endpoint detection
+Feb 25 06:57:09 ubuntu-23 netclient[841]: completed pull for server nm.188-166-182-181.nip.io
+Feb 25 06:57:09 ubuntu-23 netclient[841]: [netclient] 2024-02-25 06:57:09 adding addresses to netmaker interface
+Feb 25 06:57:09 ubuntu-23 netclient[841]: [netclient] 2024-02-25 06:57:09 initialized endpoint detection on port 51821
+Feb 25 06:57:39 ubuntu-23 netclient[841]: [netclient] 2024-02-25 06:57:39 unable to connect to broker, retrying ...
+Feb 25 06:57:39 ubuntu-23 netclient[841]: [netclient] 2024-02-25 06:57:39 unable to connect to broker, retrying ...
+Feb 25 06:57:39 ubuntu-23 netclient[841]: [netclient] 2024-02-25 06:57:39 unable to connect to broker, retrying ...
+Feb 25 06:57:39 ubuntu-23 netclient[841]: {"time":"2024-02-25T06:57:39.328097459Z","level":"ERROR","source":"daemon.go 303}","msg":"unable to connect to broker","server":"wss://broker.nm.188-166-182-181.nip.io","error":"status can only transition to connecting from disconnected"}
+Feb 25 06:57:39 ubuntu-23 netclient[841]: {"time":"2024-02-25T06:57:39.32893206Z","level":"ERROR","source":"daemon.go 240}","msg":"unable to connect to broker","server":"wss://broker.nm.188-166-182-181.nip.io","error":"status can only transition to connecting from disconnected"}
+Feb 25 06:57:39 ubuntu-23 netclient[841]: completed pull for server nm.188-166-182-181.nip.io
+Feb 25 06:58:16 ubuntu-23 netclient[841]: [netclient] 2024-02-25 06:58:16 could not connect to broker at nm.188-166-182-181.nip.io
+Feb 25 06:58:16 ubuntu-23 netclient[841]: {"time":"2024-02-25T06:58:16.180008909Z","level":"ERROR","source":"mqpublish.go 250}","msg":"could not connect to broker at","server":"nm.188-166-182-181.nip.io","error":"connection timeout"}
+Feb 25 06:58:16 ubuntu-23 netclient[841]: [netclient] 2024-02-25 06:58:16 error occurred during publishing of metrics on node ubuntu-23 connection timeout
+Feb 25 07:38:16 ubuntu-23 netclient[841]: [netclient] 2024-02-25 07:38:16 determined new endpoint for peer IprfZdXbNM/dSspvHZIX7+yafjESSIYkPwRe9CswKWQ= - 10.126.0.6:51821
+Feb 25 07:38:16 ubuntu-23 netclient[841]: [netclient] 2024-02-25 07:38:16 determined new endpoint for peer rYaboxRjMDkzz5tjtcOjObX9Lpxiao42bh/sZNvIYG8= - 10.126.0.5:51821
+Feb 25 07:38:16 ubuntu-23 netclient[841]: [netclient] 2024-02-25 07:38:16 determined new endpoint for peer B1EPi/UT+5/2HnCp7i28eGvgwr0+jcatzN6pug8JFHo= - 10.126.0.4:51821
+Feb 25 07:38:40 ubuntu-23 netclient[841]: [netclient] 2024-02-25 07:38:40 checkin routine closed
+Feb 25 07:38:40 ubuntu-23 netclient[841]: [netclient] 2024-02-25 07:38:40 closed endpoint detection
+Feb 25 07:38:41 ubuntu-23 netclient[841]: completed pull for server nm.188-166-182-181.nip.io
+Feb 25 07:38:41 ubuntu-23 netclient[841]: [netclient] 2024-02-25 07:38:41 adding addresses to netmaker interface
+Feb 25 07:38:41 ubuntu-23 netclient[841]: [netclient] 2024-02-25 07:38:41 initialized endpoint detection on port 51821
+Feb 25 07:38:44 ubuntu-23 netclient[841]: [netclient] 2024-02-25 07:38:44 could not connect to broker at nm.188-166-182-181.nip.io
+Feb 25 07:38:44 ubuntu-23 netclient[841]: {"time":"2024-02-25T07:38:44.14818797Z","level":"ERROR","source":"mqpublish.go 250}","msg":"could not connect to broker at","server":"nm.188-166-182-181.nip.io","error":"connection timeout"}
+Feb 25 07:38:44 ubuntu-23 netclient[841]: [netclient] 2024-02-25 07:38:44 error occurred during publishing of metrics on node ubuntu-23 connection timeout
+Feb 25 07:38:45 ubuntu-23 netclient[841]: [netclient] 2024-02-25 07:38:45 determined new endpoint for peer B1EPi/UT+5/2HnCp7i28eGvgwr0+jcatzN6pug8JFHo= - 10.126.0.4:51821
+Feb 25 07:38:45 ubuntu-23 netclient[841]: [netclient] 2024-02-25 07:38:45 determined new endpoint for peer rYaboxRjMDkzz5tjtcOjObX9Lpxiao42bh/sZNvIYG8= - 10.126.0.5:51821
+Feb 25 07:38:45 ubuntu-23 netclient[841]: [netclient] 2024-02-25 07:38:45 determined new endpoint for peer IprfZdXbNM/dSspvHZIX7+yafjESSIYkPwRe9CswKWQ= - 10.126.0.6:51821
+Feb 25 07:38:46 ubuntu-23 netclient[841]: [netclient] 2024-02-25 07:38:46 determined new endpoint for peer B1EPi/UT+5/2HnCp7i28eGvgwr0+jcatzN6pug8JFHo= - 10.126.0.4:51821
+Feb 25 07:38:46 ubuntu-23 netclient[841]: [netclient] 2024-02-25 07:38:46 determined new endpoint for peer rYaboxRjMDkzz5tjtcOjObX9Lpxiao42bh/sZNvIYG8= - 10.126.0.5:51821
+Feb 25 07:38:46 ubuntu-23 netclient[841]: [netclient] 2024-02-25 07:38:46 determined new endpoint for peer IprfZdXbNM/dSspvHZIX7+yafjESSIYkPwRe9CswKWQ= - 10.126.0.6:51821
+Feb 25 09:40:10 ubuntu-23 netclient[841]: {"time":"2024-02-25T09:40:10.237279231Z","level":"ERROR","source":"wireguard_linux.go 347}","msg":"delete rule failed","error":"no such file or directory"}
+Feb 25 09:40:10 ubuntu-23 netclient[841]: {"time":"2024-02-25T09:40:10.237938062Z","level":"ERROR","source":"wireguard_linux.go 348}","msg":"please remove the rule manually"}
+Feb 25 09:40:10 ubuntu-23 netclient[841]: {"time":"2024-02-25T09:40:10.238113441Z","level":"ERROR","source":"wireguard_linux.go 349}","msg":"rule: ","!BADKEY":"ip rule 3000: from 0.0.0.0/0 table 111"}
+Feb 25 09:40:10 ubuntu-23 netclient[841]: {"time":"2024-02-25T09:40:10.238419244Z","level":"ERROR","source":"wireguard_linux.go 358}","msg":"delete rule failed","error":"no such file or directory"}
+Feb 25 09:40:10 ubuntu-23 netclient[841]: {"time":"2024-02-25T09:40:10.238567954Z","level":"ERROR","source":"wireguard_linux.go 359}","msg":"please remove the rule manually"}
+Feb 25 09:40:10 ubuntu-23 netclient[841]: {"time":"2024-02-25T09:40:10.23869805Z","level":"ERROR","source":"wireguard_linux.go 360}","msg":"rule: ","!BADKEY":"ip rule 2500: from 0.0.0.0/0 table 254"}
+Feb 25 09:40:10 ubuntu-23 netclient[841]: {"time":"2024-02-25T09:40:10.239019259Z","level":"ERROR","source":"wireguard_linux.go 377}","msg":"delete rule failed","error":"no such file or directory"}
+Feb 25 09:40:10 ubuntu-23 netclient[841]: {"time":"2024-02-25T09:40:10.239214144Z","level":"ERROR","source":"wireguard_linux.go 378}","msg":"please remove the rule manually"}
+Feb 25 09:40:10 ubuntu-23 netclient[841]: {"time":"2024-02-25T09:40:10.239350666Z","level":"ERROR","source":"wireguard_linux.go 379}","msg":"rule: ","!BADKEY":"ip rule 2000: from 170.64.209.216/32 table 254"}
+Feb 25 15:49:19 ubuntu-23 netclient[841]: {"time":"2024-02-25T15:49:19.890060036Z","level":"ERROR","source":"wireguard_linux.go 347}","msg":"delete rule failed","error":"no such file or directory"}
+Feb 25 15:49:19 ubuntu-23 netclient[841]: {"time":"2024-02-25T15:49:19.890872276Z","level":"ERROR","source":"wireguard_linux.go 348}","msg":"please remove the rule manually"}
+Feb 25 15:49:19 ubuntu-23 netclient[841]: {"time":"2024-02-25T15:49:19.891034218Z","level":"ERROR","source":"wireguard_linux.go 349}","msg":"rule: ","!BADKEY":"ip rule 3000: from 0.0.0.0/0 table 111"}
+Feb 25 15:49:19 ubuntu-23 netclient[841]: {"time":"2024-02-25T15:49:19.891196432Z","level":"ERROR","source":"wireguard_linux.go 358}","msg":"delete rule failed","error":"no such file or directory"}
+Feb 25 15:49:19 ubuntu-23 netclient[841]: {"time":"2024-02-25T15:49:19.891313002Z","level":"ERROR","source":"wireguard_linux.go 359}","msg":"please remove the rule manually"}
+Feb 25 15:49:19 ubuntu-23 netclient[841]: {"time":"2024-02-25T15:49:19.8914222Z","level":"ERROR","source":"wireguard_linux.go 360}","msg":"rule: ","!BADKEY":"ip rule 2500: from 0.0.0.0/0 table 254"}
+Feb 25 15:49:19 ubuntu-23 netclient[841]: {"time":"2024-02-25T15:49:19.891698833Z","level":"ERROR","source":"wireguard_linux.go 377}","msg":"delete rule failed","error":"no such file or directory"}
+Feb 25 15:49:19 ubuntu-23 netclient[841]: {"time":"2024-02-25T15:49:19.891847923Z","level":"ERROR","source":"wireguard_linux.go 378}","msg":"please remove the rule manually"}
+Feb 25 15:49:19 ubuntu-23 netclient[841]: {"time":"2024-02-25T15:49:19.891982446Z","level":"ERROR","source":"wireguard_linux.go 379}","msg":"rule: ","!BADKEY":"ip rule 2000: from 170.64.209.216/32 table 254"}
+Feb 25 15:52:38 ubuntu-23 netclient[841]: [netclient] 2024-02-25 15:52:38 adding addresses to netmaker interface
+Feb 25 15:52:38 ubuntu-23 netclient[841]: {"time":"2024-02-25T15:52:38.280901647Z","level":"ERROR","source":"wireguard_linux.go 282}","msg":"add new rule failed","error":"file exists"}
+Feb 25 15:52:38 ubuntu-23 netclient[841]: {"time":"2024-02-25T15:52:38.281345072Z","level":"ERROR","source":"wireguard_linux.go 283}","msg":"rule: ","!BADKEY":"ip rule 3000: from 0.0.0.0/0 table 111"}
+Feb 25 15:52:38 ubuntu-23 netclient[841]: {"time":"2024-02-25T15:52:38.290092248Z","level":"ERROR","source":"mqhandlers.go 165}","msg":"error setting default gateway","error":"file exists"}
+Feb 25 15:57:26 ubuntu-23 systemd[1]: Stopping netclient.service - Netclient Daemon...
+Feb 25 15:57:26 ubuntu-23 netclient[841]: {"time":"2024-02-25T15:57:26.357193574Z","level":"ERROR","source":"wireguard_linux.go 347}","msg":"delete rule failed","error":"no such file or directory"}
+Feb 25 15:57:26 ubuntu-23 netclient[841]: {"time":"2024-02-25T15:57:26.357260192Z","level":"ERROR","source":"wireguard_linux.go 348}","msg":"please remove the rule manually"}
+Feb 25 15:57:26 ubuntu-23 netclient[841]: {"time":"2024-02-25T15:57:26.357279962Z","level":"ERROR","source":"wireguard_linux.go 349}","msg":"rule: ","!BADKEY":"ip rule 3000: from 0.0.0.0/0 table 111"}
+Feb 25 15:57:26 ubuntu-23 netclient[841]: {"time":"2024-02-25T15:57:26.357322887Z","level":"ERROR","source":"wireguard_linux.go 358}","msg":"delete rule failed","error":"no such file or directory"}
+Feb 25 15:57:26 ubuntu-23 netclient[841]: {"time":"2024-02-25T15:57:26.357339047Z","level":"ERROR","source":"wireguard_linux.go 359}","msg":"please remove the rule manually"}
+Feb 25 15:57:26 ubuntu-23 netclient[841]: {"time":"2024-02-25T15:57:26.357350785Z","level":"ERROR","source":"wireguard_linux.go 360}","msg":"rule: ","!BADKEY":"ip rule 2500: from 0.0.0.0/0 table 254"}
+Feb 25 15:57:26 ubuntu-23 netclient[841]: {"time":"2024-02-25T15:57:26.357504713Z","level":"ERROR","source":"wireguard_linux.go 377}","msg":"delete rule failed","error":"no such file or directory"}
+Feb 25 15:57:26 ubuntu-23 netclient[841]: {"time":"2024-02-25T15:57:26.357524832Z","level":"ERROR","source":"wireguard_linux.go 378}","msg":"please remove the rule manually"}
+Feb 25 15:57:26 ubuntu-23 netclient[841]: {"time":"2024-02-25T15:57:26.357540817Z","level":"ERROR","source":"wireguard_linux.go 379}","msg":"rule: ","!BADKEY":"ip rule 2000: from 170.64.209.216/32 table 254"}
+Feb 25 15:57:26 ubuntu-23 netclient[841]: [netclient] 2024-02-25 15:57:26 checkin routine closed
+Feb 25 15:57:26 ubuntu-23 netclient[841]: [netclient] 2024-02-25 15:57:26 closed endpoint detection
+Feb 25 15:57:26 ubuntu-23 systemd[1]: netclient.service: Deactivated successfully.
+Feb 25 15:57:26 ubuntu-23 systemd[1]: Stopped netclient.service - Netclient Daemon.
+Feb 25 15:57:26 ubuntu-23 systemd[1]: netclient.service: Consumed 1min 35.930s CPU time.
+-- Boot 3496a845108243c69f0967b6696afea5 --
+Feb 25 15:57:54 ubuntu-23 systemd[1]: Starting netclient.service - Netclient Daemon...
+Feb 25 15:58:11 ubuntu-23 systemd[1]: Started netclient.service - Netclient Daemon.
+Feb 25 15:58:11 ubuntu-23 netclient[844]: daemon called
+Feb 25 15:58:11 ubuntu-23 netclient[844]: [netclient] 2024-02-25 15:58:11 Starting firewall...
+Feb 25 15:58:11 ubuntu-23 netclient[844]: [netclient] 2024-02-25 15:58:11 iptables is supported
+Feb 25 15:58:11 ubuntu-23 netclient[844]: [netclient] 2024-02-25 15:58:11 adding forwarding rule
+Feb 25 15:58:12 ubuntu-23 netclient[844]: completed pull for server nm.188-166-182-181.nip.io
+Feb 25 15:58:12 ubuntu-23 netclient[844]: [netclient] 2024-02-25 15:58:12 adding addresses to netmaker interface
+Feb 25 15:58:12 ubuntu-23 netclient[844]: [netclient] 2024-02-25 15:58:12 initialized endpoint detection on port 51821
+Feb 25 15:58:36 ubuntu-23 netclient[844]: [netclient] 2024-02-25 15:58:36 adding addresses to netmaker interface
+Feb 25 15:59:06 ubuntu-23 netclient[844]: [netclient] 2024-02-25 15:59:06 closed endpoint detection
+Feb 25 15:59:06 ubuntu-23 netclient[844]: [netclient] 2024-02-25 15:59:06 checkin routine closed
+Feb 25 15:59:07 ubuntu-23 netclient[844]: completed pull for server nm.188-166-182-181.nip.io
+Feb 25 15:59:07 ubuntu-23 netclient[844]: [netclient] 2024-02-25 15:59:07 adding addresses to netmaker interface
+Feb 25 15:59:07 ubuntu-23 netclient[844]: {"time":"2024-02-25T15:59:07.862429724Z","level":"ERROR","source":"wireguard_linux.go 282}","msg":"add new rule failed","error":"file exists"}
+Feb 25 15:59:07 ubuntu-23 netclient[844]: {"time":"2024-02-25T15:59:07.863502164Z","level":"ERROR","source":"wireguard_linux.go 283}","msg":"rule: ","!BADKEY":"ip rule 3000: from 0.0.0.0/0 table 111"}
+Feb 25 15:59:07 ubuntu-23 netclient[844]: {"time":"2024-02-25T15:59:07.873422647Z","level":"ERROR","source":"daemon.go 211}","msg":"failed to set inet gw","error":"file exists"}
+Feb 25 15:59:07 ubuntu-23 netclient[844]: [netclient] 2024-02-25 15:59:07 initialized endpoint detection on port 51821
+Feb 25 16:00:09 ubuntu-23 systemd[1]: Stopping netclient.service - Netclient Daemon...
+Feb 25 16:00:09 ubuntu-23 netclient[844]: {"time":"2024-02-25T16:00:09.300020811Z","level":"ERROR","source":"wireguard_linux.go 347}","msg":"delete rule failed","error":"no such file or directory"}
+Feb 25 16:00:09 ubuntu-23 netclient[844]: {"time":"2024-02-25T16:00:09.300101723Z","level":"ERROR","source":"wireguard_linux.go 348}","msg":"please remove the rule manually"}
+Feb 25 16:00:09 ubuntu-23 netclient[844]: {"time":"2024-02-25T16:00:09.300139925Z","level":"ERROR","source":"wireguard_linux.go 349}","msg":"rule: ","!BADKEY":"ip rule 3000: from 0.0.0.0/0 table 111"}
+Feb 25 16:00:09 ubuntu-23 netclient[844]: {"time":"2024-02-25T16:00:09.300184632Z","level":"ERROR","source":"wireguard_linux.go 358}","msg":"delete rule failed","error":"no such file or directory"}
+Feb 25 16:00:09 ubuntu-23 netclient[844]: {"time":"2024-02-25T16:00:09.30020011Z","level":"ERROR","source":"wireguard_linux.go 359}","msg":"please remove the rule manually"}
+Feb 25 16:00:09 ubuntu-23 netclient[844]: {"time":"2024-02-25T16:00:09.300234118Z","level":"ERROR","source":"wireguard_linux.go 360}","msg":"rule: ","!BADKEY":"ip rule 2500: from 0.0.0.0/0 table 254"}
+Feb 25 16:00:09 ubuntu-23 netclient[844]: {"time":"2024-02-25T16:00:09.300434267Z","level":"ERROR","source":"wireguard_linux.go 377}","msg":"delete rule failed","error":"no such file or directory"}
+Feb 25 16:00:09 ubuntu-23 netclient[844]: {"time":"2024-02-25T16:00:09.300470986Z","level":"ERROR","source":"wireguard_linux.go 378}","msg":"please remove the rule manually"}
+Feb 25 16:00:09 ubuntu-23 netclient[844]: {"time":"2024-02-25T16:00:09.300487981Z","level":"ERROR","source":"wireguard_linux.go 379}","msg":"rule: ","!BADKEY":"ip rule 2000: from 170.64.209.216/32 table 254"}
+Feb 25 16:00:09 ubuntu-23 netclient[844]: [netclient] 2024-02-25 16:00:09 checkin routine closed
+Feb 25 16:00:09 ubuntu-23 netclient[844]: [netclient] 2024-02-25 16:00:09 closed endpoint detection
+Feb 25 16:00:09 ubuntu-23 systemd[1]: netclient.service: Deactivated successfully.
+Feb 25 16:00:09 ubuntu-23 systemd[1]: Stopped netclient.service - Netclient Daemon.
+-- Boot 2de5c7bf011443609b53caa6170a65f1 --
+Feb 25 16:00:36 ubuntu-23 systemd[1]: Starting netclient.service - Netclient Daemon...
+Feb 25 16:00:53 ubuntu-23 systemd[1]: Started netclient.service - Netclient Daemon.
+Feb 25 16:00:53 ubuntu-23 netclient[846]: daemon called
+Feb 25 16:00:53 ubuntu-23 netclient[846]: [netclient] 2024-02-25 16:00:53 Starting firewall...
+Feb 25 16:00:53 ubuntu-23 netclient[846]: [netclient] 2024-02-25 16:00:53 iptables is supported
+Feb 25 16:00:53 ubuntu-23 netclient[846]: [netclient] 2024-02-25 16:00:53 adding forwarding rule
+Feb 25 16:00:54 ubuntu-23 netclient[846]: completed pull for server nm.188-166-182-181.nip.io
+Feb 25 16:00:54 ubuntu-23 netclient[846]: [netclient] 2024-02-25 16:00:54 adding addresses to netmaker interface
+Feb 25 16:00:54 ubuntu-23 netclient[846]: [netclient] 2024-02-25 16:00:54 initialized endpoint detection on port 51821
+Feb 25 16:01:24 ubuntu-23 netclient[846]: [netclient] 2024-02-25 16:01:24 unable to connect to broker, retrying ...
+Feb 25 16:01:24 ubuntu-23 netclient[846]: [netclient] 2024-02-25 16:01:24 unable to connect to broker, retrying ...
+Feb 25 16:01:24 ubuntu-23 netclient[846]: [netclient] 2024-02-25 16:01:24 unable to connect to broker, retrying ...
+Feb 25 16:01:24 ubuntu-23 netclient[846]: {"time":"2024-02-25T16:01:24.50966949Z","level":"ERROR","source":"daemon.go 303}","msg":"unable to connect to broker","server":"wss://broker.nm.188-166-182-181.nip.io","error":"status can only transition to connecting from disconnected"}
+Feb 25 16:01:24 ubuntu-23 netclient[846]: {"time":"2024-02-25T16:01:24.51036054Z","level":"ERROR","source":"daemon.go 240}","msg":"unable to connect to broker","server":"wss://broker.nm.188-166-182-181.nip.io","error":"status can only transition to connecting from disconnected"}
+Feb 25 16:01:25 ubuntu-23 netclient[846]: completed pull for server nm.188-166-182-181.nip.io
+Feb 25 16:01:33 ubuntu-23 netclient[846]: [netclient] 2024-02-25 16:01:33 adding addresses to netmaker interface
+Feb 25 16:01:58 ubuntu-23 netclient[846]: [netclient] 2024-02-25 16:01:58 closed endpoint detection
+Feb 25 16:02:24 ubuntu-23 netclient[846]: [netclient] 2024-02-25 16:02:24 could not connect to broker at nm.188-166-182-181.nip.io
+Feb 25 16:02:24 ubuntu-23 netclient[846]: {"time":"2024-02-25T16:02:24.512977842Z","level":"ERROR","source":"mqpublish.go 250}","msg":"could not connect to broker at","server":"nm.188-166-182-181.nip.io","error":"connection timeout"}
+Feb 25 16:02:24 ubuntu-23 netclient[846]: [netclient] 2024-02-25 16:02:24 error publishing checkin connection timeout
+Feb 25 16:02:24 ubuntu-23 netclient[846]: [netclient] 2024-02-25 16:02:24 checkin routine closed
+Feb 25 16:02:25 ubuntu-23 netclient[846]: completed pull for server nm.188-166-182-181.nip.io
+Feb 25 16:02:25 ubuntu-23 netclient[846]: [netclient] 2024-02-25 16:02:25 adding addresses to netmaker interface
+Feb 25 16:02:25 ubuntu-23 netclient[846]: {"time":"2024-02-25T16:02:25.508584498Z","level":"ERROR","source":"wireguard_linux.go 282}","msg":"add new rule failed","error":"file exists"}
+Feb 25 16:02:25 ubuntu-23 netclient[846]: {"time":"2024-02-25T16:02:25.508932172Z","level":"ERROR","source":"wireguard_linux.go 283}","msg":"rule: ","!BADKEY":"ip rule 3000: from 0.0.0.0/0 table 111"}
+Feb 25 16:02:25 ubuntu-23 netclient[846]: {"time":"2024-02-25T16:02:25.518181976Z","level":"ERROR","source":"daemon.go 211}","msg":"failed to set inet gw","error":"file exists"}
+Feb 25 16:02:25 ubuntu-23 netclient[846]: [netclient] 2024-02-25 16:02:25 initialized endpoint detection on port 51821
+Feb 25 16:05:15 ubuntu-23 netclient[846]: [netclient] 2024-02-25 16:05:15 adding addresses to netmaker interface
+Feb 25 16:05:15 ubuntu-23 netclient[846]: {"time":"2024-02-25T16:05:15.773794855Z","level":"ERROR","source":"wireguard_linux.go 282}","msg":"add new rule failed","error":"file exists"}
+Feb 25 16:05:15 ubuntu-23 netclient[846]: {"time":"2024-02-25T16:05:15.774131144Z","level":"ERROR","source":"wireguard_linux.go 283}","msg":"rule: ","!BADKEY":"ip rule 3000: from 0.0.0.0/0 table 111"}
+Feb 25 16:05:15 ubuntu-23 netclient[846]: {"time":"2024-02-25T16:05:15.79227424Z","level":"ERROR","source":"mqhandlers.go 165}","msg":"error setting default gateway","error":"file exists"}
+Feb 25 16:07:36 ubuntu-23 netclient[846]: [netclient] 2024-02-25 16:07:36 adding addresses to netmaker interface
+Feb 25 16:07:36 ubuntu-23 netclient[846]: {"time":"2024-02-25T16:07:36.288341013Z","level":"ERROR","source":"wireguard_linux.go 282}","msg":"add new rule failed","error":"file exists"}
+Feb 25 16:07:36 ubuntu-23 netclient[846]: {"time":"2024-02-25T16:07:36.288706012Z","level":"ERROR","source":"wireguard_linux.go 283}","msg":"rule: ","!BADKEY":"ip rule 3000: from 0.0.0.0/0 table 111"}
+Feb 25 16:07:36 ubuntu-23 netclient[846]: {"time":"2024-02-25T16:07:36.297036856Z","level":"ERROR","source":"mqhandlers.go 165}","msg":"error setting default gateway","error":"file exists"}
+Feb 25 16:08:10 ubuntu-23 netclient[846]: [netclient] 2024-02-25 16:08:10 adding addresses to netmaker interface
+Feb 25 16:12:36 ubuntu-23 netclient[846]: {"time":"2024-02-25T16:12:36.532826735Z","level":"ERROR","source":"wireguard_linux.go 282}","msg":"add new rule failed","error":"file exists"}
+Feb 25 16:12:36 ubuntu-23 netclient[846]: {"time":"2024-02-25T16:12:36.533784272Z","level":"ERROR","source":"wireguard_linux.go 283}","msg":"rule: ","!BADKEY":"ip rule 3000: from 0.0.0.0/0 table 111"}
+Feb 25 16:12:36 ubuntu-23 netclient[846]: {"time":"2024-02-25T16:12:36.542764171Z","level":"ERROR","source":"mqhandlers.go 165}","msg":"error setting default gateway","error":"file exists"}
+Feb 25 16:16:17 ubuntu-23 netclient[846]: [netclient] 2024-02-25 16:16:17 determined new endpoint for peer B1EPi/UT+5/2HnCp7i28eGvgwr0+jcatzN6pug8JFHo= - 10.126.0.4:51821
+Feb 25 16:16:17 ubuntu-23 netclient[846]: [netclient] 2024-02-25 16:16:17 determined new endpoint for peer IprfZdXbNM/dSspvHZIX7+yafjESSIYkPwRe9CswKWQ= - 10.126.0.6:51821
+Feb 25 16:16:17 ubuntu-23 netclient[846]: [netclient] 2024-02-25 16:16:17 determined new endpoint for peer rYaboxRjMDkzz5tjtcOjObX9Lpxiao42bh/sZNvIYG8= - 10.126.0.5:51821
+Feb 26 06:48:59 ubuntu-23 netclient[846]: [netclient] 2024-02-26 06:48:59 checkin routine closed
+Feb 26 06:48:59 ubuntu-23 netclient[846]: [netclient] 2024-02-26 06:48:59 closed endpoint detection
+Feb 26 06:48:59 ubuntu-23 systemd[1]: Stopping netclient.service - Netclient Daemon...
+Feb 26 06:48:59 ubuntu-23 systemd[1]: netclient.service: Deactivated successfully.
+Feb 26 06:48:59 ubuntu-23 systemd[1]: Stopped netclient.service - Netclient Daemon.
+Feb 26 06:48:59 ubuntu-23 systemd[1]: netclient.service: Consumed 2min 29.390s CPU time.
+-- Boot 646bec9903a9420488abdc934cc95f4e --
+Feb 26 06:49:26 ubuntu-23 systemd[1]: Starting netclient.service - Netclient Daemon...
+Feb 26 06:49:43 ubuntu-23 systemd[1]: Started netclient.service - Netclient Daemon.
+Feb 26 06:49:43 ubuntu-23 netclient[845]: daemon called
+Feb 26 06:49:43 ubuntu-23 netclient[845]: [netclient] 2024-02-26 06:49:43 Starting firewall...
+Feb 26 06:49:43 ubuntu-23 netclient[845]: [netclient] 2024-02-26 06:49:43 iptables is supported
+Feb 26 06:49:44 ubuntu-23 netclient[845]: [netclient] 2024-02-26 06:49:44 adding forwarding rule
+Feb 26 06:49:45 ubuntu-23 netclient[845]: completed pull for server nm.188-166-182-181.nip.io
+Feb 26 06:49:45 ubuntu-23 netclient[845]: [netclient] 2024-02-26 06:49:45 adding addresses to netmaker interface
+Feb 26 06:49:45 ubuntu-23 netclient[845]: [netclient] 2024-02-26 06:49:45 initialized endpoint detection on port 51821
+Feb 26 06:49:46 ubuntu-23 netclient[845]: [netclient] 2024-02-26 06:49:46 adding addresses to netmaker interface
+Feb 26 06:49:49 ubuntu-23 netclient[845]: [netclient] 2024-02-26 06:49:49 determined new endpoint for peer IprfZdXbNM/dSspvHZIX7+yafjESSIYkPwRe9CswKWQ= - 10.126.0.6:51821
+Feb 26 06:49:49 ubuntu-23 netclient[845]: [netclient] 2024-02-26 06:49:49 determined new endpoint for peer rYaboxRjMDkzz5tjtcOjObX9Lpxiao42bh/sZNvIYG8= - 10.126.0.5:51821
+Feb 26 06:49:49 ubuntu-23 netclient[845]: [netclient] 2024-02-26 06:49:49 determined new endpoint for peer B1EPi/UT+5/2HnCp7i28eGvgwr0+jcatzN6pug8JFHo= - 10.126.0.4:51821
+Feb 26 06:49:50 ubuntu-23 netclient[845]: [netclient] 2024-02-26 06:49:50 determined new endpoint for peer B1EPi/UT+5/2HnCp7i28eGvgwr0+jcatzN6pug8JFHo= - 10.126.0.4:51821
+Feb 26 06:49:50 ubuntu-23 netclient[845]: [netclient] 2024-02-26 06:49:50 determined new endpoint for peer IprfZdXbNM/dSspvHZIX7+yafjESSIYkPwRe9CswKWQ= - 10.126.0.6:51821
+Feb 26 06:49:50 ubuntu-23 netclient[845]: [netclient] 2024-02-26 06:49:50 determined new endpoint for peer rYaboxRjMDkzz5tjtcOjObX9Lpxiao42bh/sZNvIYG8= - 10.126.0.5:51821
+Feb 26 06:54:31 ubuntu-23 netclient[845]: [netclient] 2024-02-26 06:54:31 checkin routine closed
+Feb 26 06:54:31 ubuntu-23 netclient[845]: [netclient] 2024-02-26 06:54:31 closed endpoint detection
+Feb 26 06:54:31 ubuntu-23 systemd[1]: Stopping netclient.service - Netclient Daemon...
+Feb 26 06:54:31 ubuntu-23 systemd[1]: netclient.service: Deactivated successfully.
+Feb 26 06:54:31 ubuntu-23 systemd[1]: Stopped netclient.service - Netclient Daemon.
+Feb 26 06:54:31 ubuntu-23 systemd[1]: netclient.service: Consumed 1.093s CPU time.
+-- Boot 6003a098ed4843f587654f50dd8fc71e --
+Feb 26 06:54:57 ubuntu-23 systemd[1]: Starting netclient.service - Netclient Daemon...
+Feb 26 06:55:14 ubuntu-23 systemd[1]: Started netclient.service - Netclient Daemon.
+Feb 26 06:55:14 ubuntu-23 netclient[985]: daemon called
+Feb 26 06:55:14 ubuntu-23 netclient[985]: [netclient] 2024-02-26 06:55:14 Starting firewall...
+Feb 26 06:55:14 ubuntu-23 netclient[985]: [netclient] 2024-02-26 06:55:14 iptables is supported
+Feb 26 06:55:15 ubuntu-23 netclient[985]: [netclient] 2024-02-26 06:55:15 adding forwarding rule
+Feb 26 06:55:16 ubuntu-23 netclient[985]: completed pull for server nm.188-166-182-181.nip.io
+Feb 26 06:55:16 ubuntu-23 netclient[985]: [netclient] 2024-02-26 06:55:16 adding addresses to netmaker interface
+Feb 26 06:55:16 ubuntu-23 netclient[985]: [netclient] 2024-02-26 06:55:16 initialized endpoint detection on port 51821
+Feb 26 06:55:16 ubuntu-23 netclient[985]: [netclient] 2024-02-26 06:55:16 adding addresses to netmaker interface
+Feb 26 06:55:20 ubuntu-23 netclient[985]: [netclient] 2024-02-26 06:55:20 determined new endpoint for peer rYaboxRjMDkzz5tjtcOjObX9Lpxiao42bh/sZNvIYG8= - 10.126.0.5:51821
+Feb 26 06:55:20 ubuntu-23 netclient[985]: [netclient] 2024-02-26 06:55:20 determined new endpoint for peer IprfZdXbNM/dSspvHZIX7+yafjESSIYkPwRe9CswKWQ= - 10.126.0.6:51821
+Feb 26 06:55:20 ubuntu-23 netclient[985]: [netclient] 2024-02-26 06:55:20 determined new endpoint for peer B1EPi/UT+5/2HnCp7i28eGvgwr0+jcatzN6pug8JFHo= - 10.126.0.4:51821
+Feb 26 06:55:20 ubuntu-23 netclient[985]: [netclient] 2024-02-26 06:55:20 determined new endpoint for peer B1EPi/UT+5/2HnCp7i28eGvgwr0+jcatzN6pug8JFHo= - 10.126.0.4:51821
+Feb 26 06:55:20 ubuntu-23 netclient[985]: [netclient] 2024-02-26 06:55:20 determined new endpoint for peer rYaboxRjMDkzz5tjtcOjObX9Lpxiao42bh/sZNvIYG8= - 10.126.0.5:51821
+Feb 26 06:55:20 ubuntu-23 netclient[985]: [netclient] 2024-02-26 06:55:20 determined new endpoint for peer IprfZdXbNM/dSspvHZIX7+yafjESSIYkPwRe9CswKWQ= - 10.126.0.6:51821
+Feb 26 06:59:54 ubuntu-23 netclient[985]: [netclient] 2024-02-26 06:59:54 checkin routine closed
+Feb 26 06:59:54 ubuntu-23 netclient[985]: [netclient] 2024-02-26 06:59:54 closed endpoint detection
+Feb 26 06:59:54 ubuntu-23 systemd[1]: Stopping netclient.service - Netclient Daemon...
+Feb 26 06:59:55 ubuntu-23 systemd[1]: netclient.service: Deactivated successfully.
+Feb 26 06:59:55 ubuntu-23 systemd[1]: Stopped netclient.service - Netclient Daemon.
+Feb 26 06:59:55 ubuntu-23 systemd[1]: netclient.service: Consumed 1.151s CPU time.
+-- Boot c6486f5627a142688edb3a8821961b14 --
+Feb 26 07:00:20 ubuntu-23 systemd[1]: Starting netclient.service - Netclient Daemon...
+Feb 26 07:00:37 ubuntu-23 systemd[1]: Started netclient.service - Netclient Daemon.
+Feb 26 07:00:37 ubuntu-23 netclient[843]: daemon called
+Feb 26 07:00:37 ubuntu-23 netclient[843]: [netclient] 2024-02-26 07:00:37 Starting firewall...
+Feb 26 07:00:37 ubuntu-23 netclient[843]: [netclient] 2024-02-26 07:00:37 iptables is supported
+Feb 26 07:00:37 ubuntu-23 netclient[843]: [netclient] 2024-02-26 07:00:37 adding forwarding rule
+Feb 26 07:00:38 ubuntu-23 netclient[843]: completed pull for server nm.188-166-182-181.nip.io
+Feb 26 07:00:38 ubuntu-23 netclient[843]: [netclient] 2024-02-26 07:00:38 adding addresses to netmaker interface
+Feb 26 07:00:38 ubuntu-23 netclient[843]: [netclient] 2024-02-26 07:00:38 initialized endpoint detection on port 51821
+Feb 26 07:00:39 ubuntu-23 netclient[843]: [netclient] 2024-02-26 07:00:39 adding addresses to netmaker interface
+Feb 26 07:00:42 ubuntu-23 netclient[843]: [netclient] 2024-02-26 07:00:42 determined new endpoint for peer B1EPi/UT+5/2HnCp7i28eGvgwr0+jcatzN6pug8JFHo= - 10.126.0.4:51821
+Feb 26 07:00:42 ubuntu-23 netclient[843]: [netclient] 2024-02-26 07:00:42 determined new endpoint for peer IprfZdXbNM/dSspvHZIX7+yafjESSIYkPwRe9CswKWQ= - 10.126.0.6:51821
+Feb 26 07:00:42 ubuntu-23 netclient[843]: [netclient] 2024-02-26 07:00:42 determined new endpoint for peer rYaboxRjMDkzz5tjtcOjObX9Lpxiao42bh/sZNvIYG8= - 10.126.0.5:51821
+Feb 26 07:00:43 ubuntu-23 netclient[843]: [netclient] 2024-02-26 07:00:43 determined new endpoint for peer rYaboxRjMDkzz5tjtcOjObX9Lpxiao42bh/sZNvIYG8= - 10.126.0.5:51821
+Feb 26 07:00:43 ubuntu-23 netclient[843]: [netclient] 2024-02-26 07:00:43 determined new endpoint for peer IprfZdXbNM/dSspvHZIX7+yafjESSIYkPwRe9CswKWQ= - 10.126.0.6:51821
+Feb 26 07:00:43 ubuntu-23 netclient[843]: [netclient] 2024-02-26 07:00:43 determined new endpoint for peer B1EPi/UT+5/2HnCp7i28eGvgwr0+jcatzN6pug8JFHo= - 10.126.0.4:51821
+Feb 26 08:16:13 ubuntu-23 netclient[843]: [netclient] 2024-02-26 08:16:13 adding addresses to netmaker interface
+Feb 26 08:29:29 ubuntu-23 netclient[843]: [netclient] 2024-02-26 08:29:29 adding addresses to netmaker interface
+Feb 26 08:38:59 ubuntu-23 netclient[843]: [netclient] 2024-02-26 08:38:59 adding addresses to netmaker interface
+Feb 26 12:54:13 ubuntu-23 netclient[843]: [netclient] 2024-02-26 12:54:13 checkin routine closed
+Feb 26 12:54:13 ubuntu-23 netclient[843]: [netclient] 2024-02-26 12:54:13 closed endpoint detection
+Feb 26 12:54:14 ubuntu-23 netclient[843]: {"time":"2024-02-26T12:54:14.237995282Z","level":"ERROR","source":"daemon.go 184}","msg":"fail to pull config from server","error":"Post \"https://api.nm.188-166-182-181.nip.io:443/api/hosts/adm/authenticate\": dial tcp 188.166.182.181:443: connect: connection refused"}
+Feb 26 12:54:14 ubuntu-23 netclient[843]: [netclient] 2024-02-26 12:54:14 adding addresses to netmaker interface
+Feb 26 12:54:14 ubuntu-23 netclient[843]: [netclient] 2024-02-26 12:54:14 initialized endpoint detection on port 51821
+Feb 26 12:54:44 ubuntu-23 netclient[843]: [netclient] 2024-02-26 12:54:44 unable to connect to broker, retrying ...
+Feb 26 12:54:44 ubuntu-23 netclient[843]: [netclient] 2024-02-26 12:54:44 unable to connect to broker, retrying ...
+Feb 26 12:54:44 ubuntu-23 netclient[843]: [netclient] 2024-02-26 12:54:44 unable to connect to broker, retrying ...
+Feb 26 12:54:44 ubuntu-23 netclient[843]: {"time":"2024-02-26T12:54:44.281751585Z","level":"ERROR","source":"daemon.go 303}","msg":"unable to connect to broker","server":"wss://broker.nm.188-166-182-181.nip.io","error":"status can only transition to connecting from disconnected"}
+Feb 26 12:54:44 ubuntu-23 netclient[843]: {"time":"2024-02-26T12:54:44.282206599Z","level":"ERROR","source":"daemon.go 240}","msg":"unable to connect to broker","server":"wss://broker.nm.188-166-182-181.nip.io","error":"status can only transition to connecting from disconnected"}
+Feb 26 12:55:09 ubuntu-23 netclient[843]: {"time":"2024-02-26T12:55:09.281378047Z","level":"ERROR","source":"fail_over.go 104}","msg":"failed to get peer Info","error":"Post \"https://api.nm.188-166-182-181.nip.io:443/api/hosts/adm/authenticate\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+Feb 26 12:55:14 ubuntu-23 netclient[843]: [netclient] 2024-02-26 12:55:14 MQ client is not connected, using fallback checkin for server nm.188-166-182-181.nip.io
+Feb 26 12:55:14 ubuntu-23 netclient[843]: {"time":"2024-02-26T12:55:14.281029509Z","level":"ERROR","source":"mqhandlers.go 442}","msg":"pull failed","error":"Post \"https://api.nm.188-166-182-181.nip.io:443/api/hosts/adm/authenticate\": dial tcp 188.166.182.181:443: i/o timeout (Client.Timeout exceeded while awaiting headers)"}
+Feb 26 12:55:23 ubuntu-23 netclient[843]: [netclient] 2024-02-26 12:55:23 could not connect to broker at nm.188-166-182-181.nip.io
+Feb 26 12:55:23 ubuntu-23 netclient[843]: {"time":"2024-02-26T12:55:23.549074039Z","level":"ERROR","source":"mqpublish.go 250}","msg":"could not connect to broker at","server":"nm.188-166-182-181.nip.io","error":"connection timeout"}
+Feb 26 12:55:23 ubuntu-23 netclient[843]: [netclient] 2024-02-26 12:55:23 error occurred during publishing of metrics on node ubuntu-23 connection timeout
+Feb 26 12:55:32 ubuntu-23 netclient[843]: {"time":"2024-02-26T12:55:32.426174447Z","level":"ERROR","source":"fail_over.go 104}","msg":"failed to get peer Info","error":"Post \"https://api.nm.188-166-182-181.nip.io:443/api/hosts/adm/authenticate\": dial tcp 188.166.182.181:443: connect: connection refused"}
+Feb 26 12:55:33 ubuntu-23 netclient[843]: {"time":"2024-02-26T12:55:33.864667507Z","level":"ERROR","source":"mqhandlers.go 442}","msg":"pull failed","error":"Post \"https://api.nm.188-166-182-181.nip.io:443/api/hosts/adm/authenticate\": dial tcp 188.166.182.181:443: connect: connection refused"}
+Feb 26 12:55:34 ubuntu-23 netclient[843]: {"time":"2024-02-26T12:55:34.28021637Z","level":"ERROR","source":"fail_over.go 104}","msg":"failed to get peer Info","error":"Post \"https://api.nm.188-166-182-181.nip.io:443/api/hosts/adm/authenticate\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+Feb 26 12:55:44 ubuntu-23 netclient[843]: {"time":"2024-02-26T12:55:44.373904944Z","level":"ERROR","source":"mqhandlers.go 442}","msg":"pull failed","error":"Post \"https://api.nm.188-166-182-181.nip.io:443/api/hosts/adm/authenticate\": dial tcp 188.166.182.181:443: connect: connection refused"}
+Feb 26 12:55:54 ubuntu-23 netclient[843]: {"time":"2024-02-26T12:55:54.376295582Z","level":"ERROR","source":"fail_over.go 104}","msg":"failed to get peer Info","error":"Post \"https://api.nm.188-166-182-181.nip.io:443/api/hosts/adm/authenticate\": dial tcp 188.166.182.181:443: connect: connection refused"}
+Feb 26 13:01:11 ubuntu-23 netclient[843]: [netclient] 2024-02-26 13:01:11 determined new endpoint for peer B1EPi/UT+5/2HnCp7i28eGvgwr0+jcatzN6pug8JFHo= - 10.126.0.4:51821
+Feb 26 13:01:11 ubuntu-23 netclient[843]: [netclient] 2024-02-26 13:01:11 determined new endpoint for peer rYaboxRjMDkzz5tjtcOjObX9Lpxiao42bh/sZNvIYG8= - 10.126.0.5:51821
+Feb 26 13:01:11 ubuntu-23 netclient[843]: [netclient] 2024-02-26 13:01:11 determined new endpoint for peer IprfZdXbNM/dSspvHZIX7+yafjESSIYkPwRe9CswKWQ= - 10.126.0.6:51821
+Feb 26 13:03:36 ubuntu-23 netclient[843]: [netclient] 2024-02-26 13:03:36 checkin routine closed
+Feb 26 13:03:36 ubuntu-23 netclient[843]: [netclient] 2024-02-26 13:03:36 closed endpoint detection
+Feb 26 13:03:37 ubuntu-23 netclient[843]: {"time":"2024-02-26T13:03:37.543040726Z","level":"ERROR","source":"daemon.go 184}","msg":"fail to pull config from server","error":"Post \"https://api.nm.188-166-182-181.nip.io:443/api/hosts/adm/authenticate\": dial tcp 188.166.182.181:443: connect: connection refused"}
+Feb 26 13:03:37 ubuntu-23 netclient[843]: [netclient] 2024-02-26 13:03:37 adding addresses to netmaker interface
+Feb 26 13:03:37 ubuntu-23 netclient[843]: [netclient] 2024-02-26 13:03:37 initialized endpoint detection on port 51821
+Feb 26 13:04:02 ubuntu-23 netclient[843]: {"time":"2024-02-26T13:04:02.680254204Z","level":"ERROR","source":"fail_over.go 104}","msg":"failed to get peer Info","error":"Post \"https://api.nm.188-166-182-181.nip.io:443/api/hosts/adm/authenticate\": dial tcp 188.166.182.181:443: connect: connection refused"}
+Feb 26 13:04:07 ubuntu-23 netclient[843]: [netclient] 2024-02-26 13:04:07 unable to connect to broker, retrying ...
+Feb 26 13:04:07 ubuntu-23 netclient[843]: [netclient] 2024-02-26 13:04:07 unable to connect to broker, retrying ...
+Feb 26 13:04:07 ubuntu-23 netclient[843]: [netclient] 2024-02-26 13:04:07 unable to connect to broker, retrying ...
+Feb 26 13:04:07 ubuntu-23 netclient[843]: {"time":"2024-02-26T13:04:07.586725379Z","level":"ERROR","source":"daemon.go 303}","msg":"unable to connect to broker","server":"wss://broker.nm.188-166-182-181.nip.io","error":"status can only transition to connecting from disconnected"}
+Feb 26 13:04:07 ubuntu-23 netclient[843]: {"time":"2024-02-26T13:04:07.586966487Z","level":"ERROR","source":"daemon.go 240}","msg":"unable to connect to broker","server":"wss://broker.nm.188-166-182-181.nip.io","error":"status can only transition to connecting from disconnected"}
+Feb 26 13:04:08 ubuntu-23 netclient[843]: completed pull for server nm.188-166-182-181.nip.io
+Feb 26 13:04:12 ubuntu-23 netclient[843]: [netclient] 2024-02-26 13:04:12 determined new endpoint for peer IprfZdXbNM/dSspvHZIX7+yafjESSIYkPwRe9CswKWQ= - 10.126.0.6:51821
+Feb 26 13:04:12 ubuntu-23 netclient[843]: [netclient] 2024-02-26 13:04:12 determined new endpoint for peer rYaboxRjMDkzz5tjtcOjObX9Lpxiao42bh/sZNvIYG8= - 10.126.0.5:51821
+Feb 26 13:04:12 ubuntu-23 netclient[843]: [netclient] 2024-02-26 13:04:12 determined new endpoint for peer B1EPi/UT+5/2HnCp7i28eGvgwr0+jcatzN6pug8JFHo= - 10.126.0.4:51821
+Feb 26 14:25:03 ubuntu-23 netclient[843]: [netclient] 2024-02-26 14:25:03 adding addresses to netmaker interface
+Feb 26 14:30:14 ubuntu-23 netclient[843]: [netclient] 2024-02-26 14:30:14 adding addresses to netmaker interface
+Feb 26 14:35:03 ubuntu-23 netclient[843]: [netclient] 2024-02-26 14:35:03 adding addresses to netmaker interface
+Feb 26 14:36:27 ubuntu-23 netclient[843]: [netclient] 2024-02-26 14:36:27 adding addresses to netmaker interface
+Feb 26 14:36:27 ubuntu-23 netclient[843]: [netclient] 2024-02-26 14:36:27 adding addresses to netmaker interface
+Feb 26 14:42:05 ubuntu-23 netclient[843]: [netclient] 2024-02-26 14:42:05 adding addresses to netmaker interface
+Feb 26 14:42:05 ubuntu-23 netclient[843]: [netclient] 2024-02-26 14:42:05 adding addresses to netmaker interface
+Feb 26 14:44:23 ubuntu-23 netclient[843]: [netclient] 2024-02-26 14:44:23 adding addresses to netmaker interface
+Feb 26 14:44:23 ubuntu-23 netclient[843]: [netclient] 2024-02-26 14:44:23 adding addresses to netmaker interface
+Feb 26 14:58:07 ubuntu-23 netclient[843]: [netclient] 2024-02-26 14:58:07 adding addresses to netmaker interface
+Feb 26 14:58:08 ubuntu-23 netclient[843]: [netclient] 2024-02-26 14:58:08 adding addresses to netmaker interface
+Feb 26 14:58:10 ubuntu-23 netclient[843]: [netclient] 2024-02-26 14:58:10 adding addresses to netmaker interface
+Feb 26 14:58:10 ubuntu-23 netclient[843]: [netclient] 2024-02-26 14:58:10 adding addresses to netmaker interface
+Feb 26 14:58:14 ubuntu-23 netclient[843]: [netclient] 2024-02-26 14:58:14 adding addresses to netmaker interface
+Feb 26 15:04:09 ubuntu-23 netclient[843]: [netclient] 2024-02-26 15:04:09 adding addresses to netmaker interface
+Feb 26 15:06:33 ubuntu-23 netclient[843]: [netclient] 2024-02-26 15:06:33 adding addresses to netmaker interface
+Feb 26 15:09:46 ubuntu-23 netclient[843]: [netclient] 2024-02-26 15:09:46 adding addresses to netmaker interface
+Feb 26 15:13:13 ubuntu-23 netclient[843]: [netclient] 2024-02-26 15:13:13 adding addresses to netmaker interface
+Feb 26 15:13:13 ubuntu-23 netclient[843]: [netclient] 2024-02-26 15:13:13 adding addresses to netmaker interface
+Feb 26 15:17:26 ubuntu-23 netclient[843]: [netclient] 2024-02-26 15:17:26 adding addresses to netmaker interface
+Feb 26 15:17:26 ubuntu-23 netclient[843]: [netclient] 2024-02-26 15:17:26 adding addresses to netmaker interface
+Feb 26 15:17:47 ubuntu-23 netclient[843]: [netclient] 2024-02-26 15:17:47 adding addresses to netmaker interface
+Feb 26 15:17:47 ubuntu-23 netclient[843]: [netclient] 2024-02-26 15:17:47 adding addresses to netmaker interface
+Feb 26 15:21:36 ubuntu-23 netclient[843]: [netclient] 2024-02-26 15:21:36 adding addresses to netmaker interface
+Feb 26 15:21:36 ubuntu-23 netclient[843]: [netclient] 2024-02-26 15:21:36 adding addresses to netmaker interface
+Feb 26 15:27:43 ubuntu-23 netclient[843]: [netclient] 2024-02-26 15:27:43 adding addresses to netmaker interface
+Feb 26 15:27:43 ubuntu-23 netclient[843]: [netclient] 2024-02-26 15:27:43 adding addresses to netmaker interface
+Feb 26 15:38:54 ubuntu-23 netclient[843]: [netclient] 2024-02-26 15:38:54 adding addresses to netmaker interface
+Feb 26 15:38:54 ubuntu-23 netclient[843]: [netclient] 2024-02-26 15:38:54 adding addresses to netmaker interface
+Feb 26 15:39:21 ubuntu-23 netclient[843]: [netclient] 2024-02-26 15:39:21 adding addresses to netmaker interface
+Feb 26 15:39:21 ubuntu-23 netclient[843]: [netclient] 2024-02-26 15:39:21 adding addresses to netmaker interface
+Feb 26 15:54:20 ubuntu-23 netclient[843]: [netclient] 2024-02-26 15:54:20 adding addresses to netmaker interface
+Feb 26 15:58:59 ubuntu-23 netclient[843]: [netclient] 2024-02-26 15:58:59 adding addresses to netmaker interface
+Feb 26 15:59:32 ubuntu-23 netclient[843]: [netclient] 2024-02-26 15:59:32 adding addresses to netmaker interface
+Feb 26 16:01:57 ubuntu-23 netclient[843]: [netclient] 2024-02-26 16:01:57 adding addresses to netmaker interface
+Feb 26 16:04:02 ubuntu-23 netclient[843]: [netclient] 2024-02-26 16:04:02 adding addresses to netmaker interface
+Feb 26 16:04:02 ubuntu-23 netclient[843]: [netclient] 2024-02-26 16:04:02 adding addresses to netmaker interface
+Feb 26 16:04:40 ubuntu-23 netclient[843]: [netclient] 2024-02-26 16:04:40 adding addresses to netmaker interface
+Feb 26 16:05:36 ubuntu-23 netclient[843]: [netclient] 2024-02-26 16:05:36 adding addresses to netmaker interface
+Feb 26 16:05:50 ubuntu-23 netclient[843]: [netclient] 2024-02-26 16:05:50 adding addresses to netmaker interface
+Feb 26 16:05:50 ubuntu-23 netclient[843]: [netclient] 2024-02-26 16:05:50 adding addresses to netmaker interface
+Feb 26 16:06:39 ubuntu-23 netclient[843]: [netclient] 2024-02-26 16:06:39 adding addresses to netmaker interface
+Feb 26 16:07:08 ubuntu-23 netclient[843]: [netclient] 2024-02-26 16:07:08 adding addresses to netmaker interface
+Feb 26 16:07:19 ubuntu-23 netclient[843]: [netclient] 2024-02-26 16:07:19 adding addresses to netmaker interface
+Feb 26 16:07:19 ubuntu-23 netclient[843]: [netclient] 2024-02-26 16:07:19 adding addresses to netmaker interface
+Feb 26 16:08:52 ubuntu-23 netclient[843]: [netclient] 2024-02-26 16:08:52 adding addresses to netmaker interface
+Feb 26 16:12:58 ubuntu-23 netclient[843]: [netclient] 2024-02-26 16:12:58 adding addresses to netmaker interface
+Feb 26 16:13:14 ubuntu-23 netclient[843]: [netclient] 2024-02-26 16:13:14 adding addresses to netmaker interface
+Feb 26 16:13:14 ubuntu-23 netclient[843]: [netclient] 2024-02-26 16:13:14 adding addresses to netmaker interface
+Feb 26 16:14:04 ubuntu-23 netclient[843]: [netclient] 2024-02-26 16:14:04 adding addresses to netmaker interface
+Feb 26 16:14:04 ubuntu-23 netclient[843]: [netclient] 2024-02-26 16:14:04 adding addresses to netmaker interface
+Feb 26 16:14:11 ubuntu-23 netclient[843]: [netclient] 2024-02-26 16:14:11 adding addresses to netmaker interface
+Feb 26 16:14:12 ubuntu-23 netclient[843]: [netclient] 2024-02-26 16:14:12 adding addresses to netmaker interface
+Feb 26 16:19:33 ubuntu-23 netclient[843]: [netclient] 2024-02-26 16:19:33 adding addresses to netmaker interface
+Feb 26 16:21:04 ubuntu-23 netclient[843]: [netclient] 2024-02-26 16:21:04 adding addresses to netmaker interface
+Feb 26 16:21:25 ubuntu-23 netclient[843]: [netclient] 2024-02-26 16:21:25 adding addresses to netmaker interface
+Feb 26 16:21:25 ubuntu-23 netclient[843]: [netclient] 2024-02-26 16:21:25 adding addresses to netmaker interface
+Feb 26 16:21:51 ubuntu-23 netclient[843]: [netclient] 2024-02-26 16:21:51 adding addresses to netmaker interface
+Feb 26 16:21:51 ubuntu-23 netclient[843]: [netclient] 2024-02-26 16:21:51 adding addresses to netmaker interface
