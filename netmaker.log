@@ -1,0 +1,145 @@
+              
+ __   __     ______     ______   __    __     ______     __  __     ______     ______    
+/\ "-.\ \   /\  ___\   /\__  _\ /\ "-./  \   /\  __ \   /\ \/ /    /\  ___\   /\  == \   
+\ \ \-.  \  \ \  __\   \/_/\ \/ \ \ \-./\ \  \ \  __ \  \ \  _"-.  \ \  __\   \ \  __<   
+ \ \_\\"\_\  \ \_____\    \ \_\  \ \_\ \ \_\  \ \_\ \_\  \ \_\ \_\  \ \_____\  \ \_\ \_\ 
+  \/_/ \/_/   \/_____/     \/_/   \/_/  \/_/   \/_/\/_/   \/_/\/_/   \/_____/   \/_/ /_/ 
+                                                                                         																							 
+                                   ___    ___   ____                        
+           ____  ____  ____       / _ \  / _ \ / __ \       ____  ____  ____
+          /___/ /___/ /___/      / ___/ / , _// /_/ /      /___/ /___/ /___/
+         /___/ /___/ /___/      /_/    /_/|_| \____/      /___/ /___/ /___/ 
+                                                                            
+
+[netmaker] 2024-02-29 18:01:20 connecting to sqlite 
+[netmaker] 2024-02-29 18:01:20 database successfully connected 
+[netmaker] 2024-02-29 18:01:20 failed to fetch database records for hosts 
+[netmaker] 2024-02-29 18:01:20 no OAuth provider found or not configured, continuing without OAuth 
+[netmaker] 2024-02-29 18:01:20 REST Server successfully started on port  8081  (REST) 
+[netmaker] 2024-02-29 18:01:20 connecting to mq broker at ws://mq:1883 
+[netmaker] 2024-02-29 18:01:20 starting trial license hook 
+[netmaker] 2024-02-29 18:01:21 connected to MQ Broker 
+[netmaker] 2024-02-29 18:01:29 masteradministrator created network netmaker 
+[netmaker] 2024-02-29 18:01:58 received registration attempt with token eyJzZXJ2ZXIiOiJhcGkubm0uMTY1LTIyNy00NS0yMjgubmlwLmlvIiwidmFsdWUiOiJQN1lZQUU1U0dPVkY1QUdJMlNPRUpZTFhDSldWUlZFUCJ9 
+[netmaker] 2024-02-29 18:01:58 eeeee d72bb6f8-c5a9-4d30-98d1-b8e29c6b11e1 registered with Netmaker 
+[netmaker] 2024-02-29 18:01:58 added new node 2e590c04-5415-4c1b-a64a-f217f80211db to host eeeee 
+[netmaker] 2024-02-29 18:01:58 d72bb6f8-c5a9-4d30-98d1-b8e29c6b11e1 completed a pull 
+[netmaker] 2024-02-29 18:01:59 d72bb6f8-c5a9-4d30-98d1-b8e29c6b11e1 completed a pull 
+[netmaker] 2024-02-29 18:02:04 masteradministrator created ingress gateway on node 2e590c04-5415-4c1b-a64a-f217f80211db on network netmaker 
+[netmaker] 2024-02-29 18:07:11 processed request error: unauthorized 
+[netmaker] 2024-02-29 18:07:11 processed request error: unauthorized 
+[netmaker] 2024-02-29 18:13:02 processed request error: unauthorized 
+[netmaker] 2024-02-29 18:13:25 dennis was made a super admin 
+[netmaker] 2024-02-29 18:13:55 dennis user validation failed:  incorrect credentials 
+[netmaker] 2024-02-29 18:13:55 processed request error: incorrect credentials 
+[netmaker] 2024-02-29 18:14:48 dennis created network site 
+[netmaker] 2024-02-29 18:14:48 added new node 82374c37-8ef7-461d-86e6-3ef513f17c17 to host eeeee 
+[netmaker] 2024-02-29 18:16:52 dennis created network v66 
+[netmaker] 2024-02-29 18:16:52 added new node 111dec4a-47a2-4bcf-948e-1418f179c233 to host eeeee 
+[netmaker] 2024-02-29 18:17:29 dennis requested fetching network node metrics on network site 
+[netmaker] 2024-02-29 18:17:29 dennis fetched metrics for network site 
+[netmaker] 2024-02-29 18:17:29 dennis requested fetching external client metrics on network site 
+[netmaker] 2024-02-29 18:17:29 dennis fetched ext client metrics for network site 
+[netmaker] 2024-02-29 18:17:50 processed request error: unauthorized 
+[netmaker] 2024-02-29 18:18:35 received registration attempt with token eyJzZXJ2ZXIiOiJhcGkubm0uMTY1LTIyNy00NS0yMjgubmlwLmlvIiwidmFsdWUiOiJaNUpDMzdDQUFUSTU1MkNXRFlQM0ZVVzdQRU1SR0tTSSJ9 
+[netmaker] 2024-02-29 18:18:35 test-host 475571c0-de88-4944-842c-886baa42c0ac registered with Netmaker 
+[netmaker] 2024-02-29 18:18:35 added new node c28aeda6-9243-4532-89d6-b47576e88aef to host test-host 
+[netmaker] 2024-02-29 18:18:35 added new node 3bb4149d-acfa-45dd-a8fb-263ff72105b8 to host test-host 
+[netmaker] 2024-02-29 18:18:35 added new node 2e96c3f1-e015-41ae-9cb5-c3abf4509035 to host test-host 
+[netmaker] 2024-02-29 18:18:36 475571c0-de88-4944-842c-886baa42c0ac completed a pull 
+[netmaker] 2024-02-29 18:18:44 dennis requested fetching network node metrics on network netmaker 
+[netmaker] 2024-02-29 18:18:44 dennis fetched metrics for network netmaker 
+[netmaker] 2024-02-29 18:18:45 dennis requested fetching external client metrics on network netmaker 
+[netmaker] 2024-02-29 18:18:45 dennis fetched ext client metrics for network netmaker 
+[netmaker] 2024-02-29 18:18:45 dennis requested fetching network node metrics on network site 
+[netmaker] 2024-02-29 18:18:45 dennis fetched metrics for network site 
+[netmaker] 2024-02-29 18:18:46 dennis requested fetching external client metrics on network site 
+[netmaker] 2024-02-29 18:18:46 dennis fetched ext client metrics for network site 
+[netmaker] 2024-02-29 18:18:46 dennis requested fetching network node metrics on network v66 
+[netmaker] 2024-02-29 18:18:46 dennis fetched metrics for network v66 
+[netmaker] 2024-02-29 18:18:47 dennis requested fetching external client metrics on network v66 
+[netmaker] 2024-02-29 18:18:47 dennis fetched ext client metrics for network v66 
+[netmaker] 2024-02-29 18:19:30 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:19:36 processed request error: unauthorized 
+[netmaker] 2024-02-29 18:19:37 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:19:55 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:20:20 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:20:37 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:21:10 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:21:35 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:21:37 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:21:45 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:22:25 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:22:30 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:22:37 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:22:50 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:23:37 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:23:45 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:24:05 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:24:30 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:24:36 dennis requested fetching network node metrics on network netmaker 
+[netmaker] 2024-02-29 18:24:36 dennis fetched metrics for network netmaker 
+[netmaker] 2024-02-29 18:24:37 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:24:37 dennis requested fetching external client metrics on network netmaker 
+[netmaker] 2024-02-29 18:24:37 dennis fetched ext client metrics for network netmaker 
+[netmaker] 2024-02-29 18:24:38 dennis requested fetching network node metrics on network site 
+[netmaker] 2024-02-29 18:24:38 dennis fetched metrics for network site 
+[netmaker] 2024-02-29 18:24:39 dennis requested fetching external client metrics on network site 
+[netmaker] 2024-02-29 18:24:39 dennis fetched ext client metrics for network site 
+[netmaker] 2024-02-29 18:24:39 dennis requested fetching network node metrics on network v66 
+[netmaker] 2024-02-29 18:24:39 dennis fetched metrics for network v66 
+[netmaker] 2024-02-29 18:24:40 dennis requested fetching external client metrics on network v66 
+[netmaker] 2024-02-29 18:24:40 dennis fetched ext client metrics for network v66 
+[netmaker] 2024-02-29 18:24:40 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:24:55 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:25:37 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:25:45 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:26:10 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:26:20 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:26:35 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:26:37 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:27:00 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:27:25 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:27:37 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:27:50 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:28:15 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:28:37 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:28:40 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:29:05 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:29:30 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:29:30 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:29:37 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:29:37 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:29:38 dennis requested fetching network node metrics on network site 
+[netmaker] 2024-02-29 18:29:38 dennis fetched metrics for network site 
+[netmaker] 2024-02-29 18:29:38 dennis requested fetching external client metrics on network site 
+[netmaker] 2024-02-29 18:29:38 dennis fetched ext client metrics for network site 
+[netmaker] 2024-02-29 18:29:39 dennis requested fetching network node metrics on network netmaker 
+[netmaker] 2024-02-29 18:29:39 dennis fetched metrics for network netmaker 
+[netmaker] 2024-02-29 18:29:39 dennis requested fetching external client metrics on network netmaker 
+[netmaker] 2024-02-29 18:29:39 dennis fetched ext client metrics for network netmaker 
+[netmaker] 2024-02-29 18:29:40 dennis requested fetching network node metrics on network site 
+[netmaker] 2024-02-29 18:29:40 dennis fetched metrics for network site 
+[netmaker] 2024-02-29 18:29:40 dennis requested fetching external client metrics on network site 
+[netmaker] 2024-02-29 18:29:40 dennis fetched ext client metrics for network site 
+[netmaker] 2024-02-29 18:29:40 dennis requested fetching network node metrics on network v66 
+[netmaker] 2024-02-29 18:29:40 dennis fetched metrics for network v66 
+[netmaker] 2024-02-29 18:29:41 dennis requested fetching external client metrics on network v66 
+[netmaker] 2024-02-29 18:29:41 dennis fetched ext client metrics for network v66 
+[netmaker] 2024-02-29 18:29:55 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:29:55 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:29:56 processed request error: error fetching node during parameter validation: no result found 
+[netmaker] 2024-02-29 18:29:59 dennis requested fetching network node metrics on network site 
+[netmaker] 2024-02-29 18:29:59 dennis fetched metrics for network site 
+[netmaker] 2024-02-29 18:30:00 dennis requested fetching external client metrics on network site 
+[netmaker] 2024-02-29 18:30:00 dennis fetched ext client metrics for network site 
+[netmaker] 2024-02-29 18:30:00 dennis requested fetching network node metrics on network v66 
+[netmaker] 2024-02-29 18:30:00 dennis fetched metrics for network v66 
+[netmaker] 2024-02-29 18:30:01 dennis requested fetching external client metrics on network v66 
+[netmaker] 2024-02-29 18:30:01 dennis fetched ext client metrics for network v66 
+[netmaker] 2024-02-29 18:30:08 failed to get host node no result found 
+[netmaker] 2024-02-29 18:30:08 failed to get host node no result found 
+[netmaker] 2024-02-29 18:30:08 failed to get host node no result found 
+[netmaker] 2024-02-29 18:30:37 received registration attempt with token eyJzZXJ2ZXIiOiJhcGkubm0uMTY1LTIyNy00NS0yMjgubmlwLmlvIiwidmFsdWUiOiJaNUpDMzdDQUFUSTU1MkNXRFlQM0ZVVzdQRU1SR0tTSSJ9 
+[netmaker] 2024-02-29 18:30:37 test-host 475571c0-de88-4944-842c-886baa42c0ac registered with Netmaker 
+[netmaker] 2024-02-29 18:30:38 475571c0-de88-4944-842c-886baa42c0ac completed a pull 
