@@ -1,0 +1,3320 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
+
+    <style>
+      body,
+      input {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+      }
+
+      code,
+      kbd,
+      pre {
+        font-family: "Roboto Mono", "Courier New", Courier, monospace
+      }
+    </style>
+  
+
+  <link rel="stylesheet" href="_static/stylesheets/application.css"/>
+  <link rel="stylesheet" href="_static/stylesheets/application-palette.css"/>
+  <link rel="stylesheet" href="_static/stylesheets/application-fixes.css"/>
+  
+  <link rel="stylesheet" href="_static/fonts/material-icons.css"/>
+  
+  <meta name="theme-color" content="#3f51b5">
+  <script src="_static/javascripts/modernizr.js"></script>
+  
+  
+  
+    <title>Authentication &#8212; Netmaker 0.23.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/material.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Usage" href="api.html" />
+    <link rel="prev" title="References" href="references.html" />
+  
+   
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=indigo data-md-color-accent=light-blue>
+  
+  <svg class="md-svg">
+    <defs data-children-count="0">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+      
+    </defs>
+  </svg>
+  
+  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
+  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
+  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+  <a href="#ui-reference" tabindex="1" class="md-skip"> Skip to content </a>
+  <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex navheader">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="index.html" title="Netmaker 0.23.0 documentation"
+           class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">&#xe869</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          <span class="md-header-nav__topic">Netmaker Docs</span>
+          <span class="md-header-nav__topic"> Authentication </span>
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+        
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" action="search.html" method="get" name="search">
+      <input type="text" class="md-search__input" name="q" placeholder=""Search""
+             autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            <a href="https://github.com/gravitl/netmaker/" title="Go to repository" class="md-source" data-md-source="github">
+
+    <div class="md-source__icon">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="28" height="28">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Netmaker
+  </div>
+</a>
+          </div>
+        </div>
+      
+      
+  
+  <script src="_static/javascripts/version_dropdown.js"></script>
+  <script>
+    var json_loc = ""versions.json"",
+        target_loc = "../",
+        text = "Versions";
+    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
+  </script>
+  
+
+    </div>
+  </nav>
+</header>
+
+  
+  <div class="md-container">
+    
+    
+    
+  <nav class="md-tabs" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+          <li class="md-tabs__item"><a href="index.html" class="md-tabs__link">Netmaker 0.23.0 documentation</a></li>
+          <li class="md-tabs__item"><a href="references.html" class="md-tabs__link">References</a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="md-main">
+      <div class="md-main__inner md-grid" data-md-component="container">
+        
+          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="index.html" title="Netmaker 0.23.0 documentation" class="md-nav__button md-logo">
+      
+        <i class="md-icon">&#xe869</i>
+      
+    </a>
+    <a href="index.html"
+       title="Netmaker 0.23.0 documentation">Netmaker Docs</a>
+  </label>
+    <div class="md-nav__source">
+      <a href="https://github.com/gravitl/netmaker/" title="Go to repository" class="md-source" data-md-source="github">
+
+    <div class="md-source__icon">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="28" height="28">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Netmaker
+  </div>
+</a>
+    </div>
+  
+  
+
+  
+  <ul class="md-nav__list">
+    <li class="md-nav__item">
+    
+    
+      <a href="about.html" class="md-nav__link">About</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="about.html#what-is-netmaker" class="md-nav__link">What is Netmaker?</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="about.html#how-does-netmaker-work" class="md-nav__link">How Does Netmaker Work?</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="about.html#use-cases-for-netmaker" class="md-nav__link">Use Cases for Netmaker</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="about.html#architecture" class="md-nav__link">Architecture</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="architecture.html" class="md-nav__link">Architecture</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="architecture.html#core-concepts" class="md-nav__link">Core Concepts</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="architecture.html#wireguard" class="md-nav__link">WireGuard</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="architecture.html#mesh-network" class="md-nav__link">Mesh Network</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="architecture.html#netmaker" class="md-nav__link">Netmaker</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="architecture.html#node" class="md-nav__link">Node</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="architecture.html#components" class="md-nav__link">Components</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="architecture.html#netmaker-server" class="md-nav__link">Netmaker Server</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="architecture.html#message-broker-mosquitto" class="md-nav__link">Message Broker (Mosquitto)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="architecture.html#netclient" class="md-nav__link">Netclient</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="architecture.html#database-sqlite-rqlite-postgres" class="md-nav__link">Database (SQLite, rqlite, postgres)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="architecture.html#netmaker-ui" class="md-nav__link">Netmaker UI</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="architecture.html#coredns" class="md-nav__link">CoreDNS</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="architecture.html#caddy" class="md-nav__link">Caddy</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="architecture.html#remote-access-clients" class="md-nav__link">Remote Access Clients</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="architecture.html#technical-process" class="md-nav__link">Technical Process</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="architecture.html#compatible-systems-for-netclient" class="md-nav__link">Compatible Systems for Netclient</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="architecture.html#limitations" class="md-nav__link">Limitations</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="getting-started.html" class="md-nav__link">Getting Started</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="install.html" class="md-nav__link">Install</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="install.html#after-trial-period-ends" class="md-nav__link">After trial period ends:</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="manual-install.html" class="md-nav__link">Manual Install</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="manual-install.html#important-notes" class="md-nav__link">Important Notes</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="manual-install.html#prerequisites" class="md-nav__link">0. Prerequisites</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="manual-install.html#server" class="md-nav__link">Server</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="manual-install.html#domain" class="md-nav__link">Domain</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="manual-install.html#prepare-dns" class="md-nav__link">1. Prepare DNS</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="manual-install.html#install-dependencies" class="md-nav__link">2. Install Dependencies</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="manual-install.html#open-firewall" class="md-nav__link">3. Open Firewall</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="manual-install.html#prepare-mq" class="md-nav__link">4. Prepare MQ</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="manual-install.html#install-netmaker" class="md-nav__link">5. Install Netmaker</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="manual-install.html#prepare-docker-compose" class="md-nav__link">Prepare Docker Compose</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="manual-install.html#extra-steps-for-pro" class="md-nav__link">Extra Steps for Pro</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="manual-install.html#start-netmaker" class="md-nav__link">6. Start Netmaker</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html" class="md-nav__link">Netclient</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#installation" class="md-nav__link">Installation</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#linux" class="md-nav__link">Linux</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#debian-distros-debian-ubuntu-mint-pop-os" class="md-nav__link">Debian Distros (debian/ubuntu/mint/pop-os)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#red-hat-distros-fedora-redhat-centos-rocky" class="md-nav__link">Red Hat Distros (fedora/redhat/centos/rocky)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#arch-distros-arch-manjaro-endeavouros" class="md-nav__link">Arch Distros (arch/manjaro/endeavouros)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#openwrt-distros-mips-mipsle" class="md-nav__link">OpenWRT Distros (mips/mipsle)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#opensuse-tumbleweed-leap" class="md-nav__link">OpenSUSE (tumbleweed/leap)</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#windows" class="md-nav__link">Windows</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#msi-installer" class="md-nav__link">MSI Installer</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#mac" class="md-nav__link">Mac</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#brew-install" class="md-nav__link">Brew Install</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#gui-installer-for-v0-22-0-and-below" class="md-nav__link">GUI Installer (for v0.22.0 and below)</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#docker" class="md-nav__link">Docker</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#joining-a-network" class="md-nav__link">Joining a Network</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#managing-netclient" class="md-nav__link">Managing Netclient</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#connecting-disconnecting-from-a-network" class="md-nav__link">Connecting/Disconnecting from a network</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#leave-a-network" class="md-nav__link">Leave a network</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#list-networks" class="md-nav__link">List Networks</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#multi-server" class="md-nav__link">Multi-Server</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#use-a-different-version" class="md-nav__link">Use a different version</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#uninstalling" class="md-nav__link">Uninstalling</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="advanced-client-install.html" class="md-nav__link">Advanced Client Installation</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="advanced-client-install.html#introduction-to-netclient" class="md-nav__link">Introduction to Netclient</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="advanced-client-install.html#note-on-mtu-settings" class="md-nav__link">Note on MTU Settings</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="advanced-client-install.html#notes-on-windows" class="md-nav__link">Notes on Windows</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="advanced-client-install.html#running-netclient-commands" class="md-nav__link">Running netclient commands</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="advanced-client-install.html#high-cpu-utilization" class="md-nav__link">High CPU Utilization</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="advanced-client-install.html#changing-network-profile-to-private" class="md-nav__link">Changing network profile to private</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="advanced-client-install.html#issue-after-windows-sleep-hibernate" class="md-nav__link">Issue after Windows sleep/hibernate</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="advanced-client-install.html#irregular-netclient-restart-on-windows-2016-server" class="md-nav__link">Irregular netclient restart on Windows 2016 server</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="advanced-client-install.html#event-id-0-in-windows-event-logs" class="md-nav__link">Event id 0 in Windows Event logs</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="advanced-client-install.html#notes-on-openwrt" class="md-nav__link">Notes on OpenWRT</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="advanced-client-install.html#modes-and-system-compatibility" class="md-nav__link">Modes and System Compatibility</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="advanced-client-install.html#cli" class="md-nav__link">CLI</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="advanced-client-install.html#daemon" class="md-nav__link">Daemon</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="advanced-client-install.html#private-dns-management" class="md-nav__link">Private DNS Management</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="advanced-client-install.html#prerequisites" class="md-nav__link">Prerequisites</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="advanced-client-install.html#configuration" class="md-nav__link">Configuration</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="advanced-client-install.html#cli-reference" class="md-nav__link">CLI Reference</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="advanced-client-install.html#installation" class="md-nav__link">Installation</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="advanced-client-install.html#managing-netclient" class="md-nav__link">Managing Netclient</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="advanced-client-install.html#connect-disconnect" class="md-nav__link">Connect / Disconnect</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="advanced-client-install.html#viewing-logs" class="md-nav__link">Viewing Logs</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="advanced-client-install.html#re-syncing-netclient-basic-troubleshooting" class="md-nav__link">Re-syncing netclient (basic troubleshooting)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="advanced-client-install.html#making-updates" class="md-nav__link">Making Updates</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="advanced-client-install.html#adding-removing-networks" class="md-nav__link">Adding/Removing Networks</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="advanced-client-install.html#uninstalling" class="md-nav__link">Uninstalling</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html" class="md-nav__link">Advanced Server Installation</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#system-compatibility" class="md-nav__link">System Compatibility</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#server-configuration-reference" class="md-nav__link">Server Configuration Reference</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#variable-description" class="md-nav__link">Variable Description</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#config-file-reference" class="md-nav__link">Config File Reference</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#compose-file-annotated" class="md-nav__link">Compose File - Annotated</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#available-docker-compose-files" class="md-nav__link">Available docker-compose files</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#emqx" class="md-nav__link">EMQX</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#linux-install-without-docker" class="md-nav__link">Linux Install without Docker</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#database-setup-optional" class="md-nav__link">Database Setup (optional)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#server-setup-using-sqlite" class="md-nav__link">Server Setup (using sqlite)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#ui-setup" class="md-nav__link">UI Setup</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#proxy-http-server" class="md-nav__link">Proxy / Http server</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#caddy" class="md-nav__link">Caddy</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#mq" class="md-nav__link">MQ</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#kubernetes-install" class="md-nav__link">Kubernetes Install</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#server-install" class="md-nav__link">Server Install</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#netclient-daemonset" class="md-nav__link">Netclient Daemonset</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#nginx-reverse-proxy-setup-with-https" class="md-nav__link">Nginx Reverse Proxy Setup with https</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#nginx-proxy-manager-setup" class="md-nav__link">Nginx Proxy Manager Setup</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#highly-available-installation-kubernetes" class="md-nav__link">Highly Available Installation (Kubernetes)</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#requirements" class="md-nav__link">Requirements</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#recommended-settings" class="md-nav__link">Recommended Settings:</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#example-installations" class="md-nav__link">Example Installations:</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#ingress" class="md-nav__link">Ingress</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#kernel-wireguard" class="md-nav__link">Kernel WireGuard</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#dns" class="md-nav__link">DNS</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#values" class="md-nav__link">Values</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#highly-available-installation-vms-bare-metal" class="md-nav__link">Highly Available Installation (VMs/Bare Metal)</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#load-balancer-setup" class="md-nav__link">1. Load Balancer Setup</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#rqlite-setup" class="md-nav__link">2. rqlite Setup</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#netmaker-setup" class="md-nav__link">3. Netmaker Setup</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#other-considerations" class="md-nav__link">4. Other Considerations</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#security-settings" class="md-nav__link">Security Settings</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#for-caddy" class="md-nav__link">For Caddy</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="server-installation.html#for-traefik" class="md-nav__link">For Traefik</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="oauth.html" class="md-nav__link">Integrating OAuth</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="oauth.html#introduction" class="md-nav__link">Introduction</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="oauth.html#configuring-your-provider" class="md-nav__link">Configuring your provider</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="oauth.html#configuring-netmaker" class="md-nav__link">Configuring Netmaker</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="oauth.html#configuring-user-permissions" class="md-nav__link">Configuring User Permissions</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="getting-started.html#setup" class="md-nav__link">Setup</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="getting-started.html#create-a-network" class="md-nav__link">Create a Network</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="getting-started.html#network-settings-description" class="md-nav__link">Network Settings Description</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="getting-started.html#create-a-key" class="md-nav__link">Create a Key</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="getting-started.html#deploy-nodes" class="md-nav__link">Deploy Nodes</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="getting-started.html#manage-nodes-hosts" class="md-nav__link">Manage Nodes/Hosts</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="getting-started.html#uninstalling-the-netclient" class="md-nav__link">Uninstalling the netclient</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="getting-started.html#uninstalling-netmaker" class="md-nav__link">Uninstalling Netmaker</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="features.html" class="md-nav__link">Features</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="features.html#egress-gateway" class="md-nav__link">Egress Gateway</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="features.html#remote-access-gateways-clients" class="md-nav__link">Remote Access Gateways & Clients</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="features.html#access-control-lists" class="md-nav__link">Access Control Lists</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="features.html#netmaker-professional" class="md-nav__link">Netmaker Professional</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/index.html" class="md-nav__link">Setup</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-setup.html" class="md-nav__link">Netmaker Professional</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-setup.html#get-a-license" class="md-nav__link">Get a License</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-setup.html#setup-your-server" class="md-nav__link">Setup your server</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-setup.html#upgrade-to-pro-from-community-edition" class="md-nav__link">Upgrade to Pro from Community Edition</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-setup.html#optional-setup-your-server-for-prometheus-and-grafana" class="md-nav__link">(Optional) Setup your server for Prometheus and Grafana</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/index.html#users" class="md-nav__link">Users</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-users.html" class="md-nav__link">Users in Netmaker Professional</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-users.html#adding-users" class="md-nav__link">Adding users</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-users.html#attaching-or-removing-user-from-a-remote-access-gateway" class="md-nav__link">Attaching or removing user from a remote access gateway</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-users.html#transferring-super-admin-rights" class="md-nav__link">Transferring super admin rights</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/index.html#relays" class="md-nav__link">Relays</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-relay-server.html" class="md-nav__link">Relay Servers</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-relay-server.html#introduction" class="md-nav__link">Introduction</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-relay-server.html#configuring-a-relay" class="md-nav__link">Configuring a Relay</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-relay-server.html#auto-relays" class="md-nav__link">Auto Relays</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/index.html#metrics" class="md-nav__link">Metrics</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-metrics.html" class="md-nav__link">Netmaker Professional Metrics</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-metrics.html#navigation" class="md-nav__link">Navigation</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-metrics.html#viewing-details" class="md-nav__link">Viewing Details</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-metrics.html#grafana-dashboard" class="md-nav__link">Grafana Dashboard</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/index.html#branding" class="md-nav__link">Branding</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-branding.html" class="md-nav__link">UI Branding</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-branding.html#modifying-the-ui-with-whitelabeling" class="md-nav__link">Modifying the UI with whitelabeling.</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/index.html#remote-access-client" class="md-nav__link">Remote Access Client</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/rac.html" class="md-nav__link">Netmaker Remote Access Client (RAC)</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/rac.html#download-installation" class="md-nav__link">Download/Installation</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/rac.html#quick-start" class="md-nav__link">Quick Start</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/rac.html#using-the-remote-access-client-rac" class="md-nav__link">Using the Remote Access Client (RAC)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/rac.html#using-netmaker-like-a-traditional-vpn" class="md-nav__link">Using Netmaker like a traditional VPN</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/rac.html#controlling-rac-user-sessions" class="md-nav__link">Controlling RAC user sessions</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/rac.html#faqs-and-known-issues" class="md-nav__link">FAQs and Known Issues</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/index.html#failovers" class="md-nav__link">FailOvers</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-failovers.html" class="md-nav__link">FailOver Servers</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-failovers.html#introduction" class="md-nav__link">Introduction</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-failovers.html#configuring-a-failover-node" class="md-nav__link">Configuring a FailOver node</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/index.html#internet-gateways" class="md-nav__link">Internet Gateways</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/internet-gateways.html" class="md-nav__link">Internet Gateways</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/internet-gateways.html#usage" class="md-nav__link">Usage</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/internet-gateways.html#create-an-internet-gateway" class="md-nav__link">Create an internet gateway</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/internet-gateways.html#update-an-internet-gateway" class="md-nav__link">Update an internet gateway</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/internet-gateways.html#delete-an-internet-gateway" class="md-nav__link">Delete an internet gateway</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/internet-gateways.html#faqs-and-known-issues" class="md-nav__link">FAQs and Known Issues</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="upgrades.html" class="md-nav__link">Upgrades</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="upgrades.html#introduction" class="md-nav__link">Introduction</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="upgrades.html#client-upgrades-general" class="md-nav__link">Client Upgrades (General)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="upgrades.html#server-upgrades-v0-20-0" class="md-nav__link">Server Upgrades (v0.20.0+)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="upgrades.html#upgrade-to-latest-from-v0-17-1" class="md-nav__link">Upgrade to latest from v0.17.1</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="upgrades.html#general-notes" class="md-nav__link">General Notes</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="upgrades.html#steps" class="md-nav__link">Steps</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="upgrades.html#critical-notes-for-0-13-x" class="md-nav__link">Critical Notes for 0.13.X</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="upgrades.html#critical-notes-for-0-10-0" class="md-nav__link">Critical Notes for 0.10.0</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="upgrades.html#upgrade-the-server-prior-to-0-10-0" class="md-nav__link">Upgrade the Server (prior to 0.10.0)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="upgrades.html#upgrade-the-server-after-v0-16-1" class="md-nav__link">Upgrade the server after v0.16.1</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="upgrades.html#upgrade-the-server-to-use-0-17-0-after-upgrading-for-0-16-3" class="md-nav__link">Upgrade the server to use 0.17.0 after Upgrading for 0.16.3</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="upgrades.html#upgrade-the-clients-prior-to-0-10-0" class="md-nav__link">Upgrade the Clients (prior to 0.10.0)</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="how-to-guides.html" class="md-nav__link">How-to-Guides</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="how-to-guides.html#egress-gateway" class="md-nav__link">Egress Gateway</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="egress-gateway.html" class="md-nav__link">egress</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="egress-gateway.html#introduction" class="md-nav__link">Introduction</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="egress-gateway.html#configuring-an-egress-gateway" class="md-nav__link">Configuring an Egress Gateway</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="egress-gateway.html#use-cases" class="md-nav__link">Use Cases</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="egress-gateway.html#remote-access" class="md-nav__link">1) Remote Access</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="egress-gateway.html#advanced-use-cases" class="md-nav__link">Advanced Use Cases</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="how-to-guides.html#ingress-gateway-external-clients" class="md-nav__link">Ingress Gateway/External Clients</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="external-clients.html" class="md-nav__link">Remote Access Gateways and Clients</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="external-clients.html#introduction" class="md-nav__link">Introduction</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="external-clients.html#configuring-a-remote-access-gateway" class="md-nav__link">Configuring a Remote Access Gateway</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="external-clients.html#adding-clients-to-a-gateway" class="md-nav__link">Adding Clients to a Gateway</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="external-clients.html#disabling-remote-access-clients" class="md-nav__link">Disabling Remote Access Clients</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="external-clients.html#internet-gateway-traditional-vpn" class="md-nav__link">Internet Gateway/Traditional VPN</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="how-to-guides.html#access-control-lists" class="md-nav__link">Access Control Lists</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="acls.html" class="md-nav__link">ACLs</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="acls.html#introduction" class="md-nav__link">Introduction</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="acls.html#configuring-acls" class="md-nav__link">Configuring ACLs</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="acls.html#acl-screen" class="md-nav__link">ACL Screen</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="acls.html#node-acl-screen" class="md-nav__link">Node ACL Screen</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="acls.html#default-node-level-acls" class="md-nav__link">Default Node-Level ACLs</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="acls.html#scenario-1-remote-access-to-from-client-devices" class="md-nav__link">Scenario 1: Remote Access to/from Client devices</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="acls.html#scenario-2-priviledged-access-to-device" class="md-nav__link">Scenario 2: Priviledged Access to Device</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="how-to-guides.html#netmaker-professional" class="md-nav__link">Netmaker Professional</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/index.html" class="md-nav__link">Setup</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-setup.html" class="md-nav__link">Netmaker Professional</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-setup.html#get-a-license" class="md-nav__link">Get a License</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-setup.html#setup-your-server" class="md-nav__link">Setup your server</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-setup.html#upgrade-to-pro-from-community-edition" class="md-nav__link">Upgrade to Pro from Community Edition</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-setup.html#optional-setup-your-server-for-prometheus-and-grafana" class="md-nav__link">(Optional) Setup your server for Prometheus and Grafana</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/index.html#users" class="md-nav__link">Users</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-users.html" class="md-nav__link">Users in Netmaker Professional</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-users.html#adding-users" class="md-nav__link">Adding users</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-users.html#attaching-or-removing-user-from-a-remote-access-gateway" class="md-nav__link">Attaching or removing user from a remote access gateway</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-users.html#transferring-super-admin-rights" class="md-nav__link">Transferring super admin rights</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/index.html#relays" class="md-nav__link">Relays</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-relay-server.html" class="md-nav__link">Relay Servers</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-relay-server.html#introduction" class="md-nav__link">Introduction</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-relay-server.html#configuring-a-relay" class="md-nav__link">Configuring a Relay</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-relay-server.html#auto-relays" class="md-nav__link">Auto Relays</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/index.html#metrics" class="md-nav__link">Metrics</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-metrics.html" class="md-nav__link">Netmaker Professional Metrics</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-metrics.html#navigation" class="md-nav__link">Navigation</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-metrics.html#viewing-details" class="md-nav__link">Viewing Details</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-metrics.html#grafana-dashboard" class="md-nav__link">Grafana Dashboard</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/index.html#branding" class="md-nav__link">Branding</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-branding.html" class="md-nav__link">UI Branding</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-branding.html#modifying-the-ui-with-whitelabeling" class="md-nav__link">Modifying the UI with whitelabeling.</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/index.html#remote-access-client" class="md-nav__link">Remote Access Client</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/rac.html" class="md-nav__link">Netmaker Remote Access Client (RAC)</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/rac.html#download-installation" class="md-nav__link">Download/Installation</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/rac.html#quick-start" class="md-nav__link">Quick Start</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/rac.html#using-the-remote-access-client-rac" class="md-nav__link">Using the Remote Access Client (RAC)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/rac.html#using-netmaker-like-a-traditional-vpn" class="md-nav__link">Using Netmaker like a traditional VPN</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/rac.html#controlling-rac-user-sessions" class="md-nav__link">Controlling RAC user sessions</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/rac.html#faqs-and-known-issues" class="md-nav__link">FAQs and Known Issues</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/index.html#failovers" class="md-nav__link">FailOvers</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-failovers.html" class="md-nav__link">FailOver Servers</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-failovers.html#introduction" class="md-nav__link">Introduction</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/pro-failovers.html#configuring-a-failover-node" class="md-nav__link">Configuring a FailOver node</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/index.html#internet-gateways" class="md-nav__link">Internet Gateways</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/internet-gateways.html" class="md-nav__link">Internet Gateways</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/internet-gateways.html#usage" class="md-nav__link">Usage</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/internet-gateways.html#create-an-internet-gateway" class="md-nav__link">Create an internet gateway</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/internet-gateways.html#update-an-internet-gateway" class="md-nav__link">Update an internet gateway</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/internet-gateways.html#delete-an-internet-gateway" class="md-nav__link">Delete an internet gateway</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pro/internet-gateways.html#faqs-and-known-issues" class="md-nav__link">FAQs and Known Issues</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="how-to-guides.html#integrating-non-native-devices" class="md-nav__link">Integrating Non-native Devices</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="integrating-non-native-devices.html" class="md-nav__link">Integrating Non-native Devices</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="integrating-non-native-devices.html#introduction" class="md-nav__link">Introduction</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="integrating-non-native-devices.html#generating-a-wireguard-configuration-file-on-remote-access-gateway" class="md-nav__link">Generating a WireGuard Configuration File on Remote Access Gateway</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="integrating-non-native-devices.html#routers-and-firewall-appliances-virtual-or-bare-metal" class="md-nav__link">Routers and Firewall Appliances (Virtual or Bare metal)</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="integrating-non-native-devices.html#pfsense" class="md-nav__link">1) pfSense</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="integrating-non-native-devices.html#opnsense" class="md-nav__link">2) OPNsense</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="integrating-non-native-devices.html#mikrotik" class="md-nav__link">3) MikroTik</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="integrating-non-native-devices.html#openwrt" class="md-nav__link">4) OpenWrt</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="integrating-non-native-devices.html#other-routers" class="md-nav__link">5) Other routers</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="integrating-non-native-devices.html#internet-of-things-iot-devices" class="md-nav__link">Internet of Things (IoT Devices)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="integrating-non-native-devices.html#other-devices" class="md-nav__link">Other Devices</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="integrating-non-native-devices.html#disclaimer" class="md-nav__link">Disclaimer</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="how-to-guides.html#external-guides" class="md-nav__link">External Guides</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="usage.html" class="md-nav__link">External Guides</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="usage.html#video-tutorials" class="md-nav__link">Video Tutorials</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="usage.html#written-tutorials" class="md-nav__link">Written Tutorials</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="references.html" class="md-nav__link">References</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="references.html#ui" class="md-nav__link">UI</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <label class="md-nav__link md-nav__link--active" for="__toc"> Authentication </label>
+    
+      <a href="#" class="md-nav__link md-nav__link--active">Authentication</a>
+      
+        
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">"Contents"</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#ui-reference--page-root" class="md-nav__link">Authentication</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#signup" class="md-nav__link">Signup</a>
+        </li>
+        <li class="md-nav__item"><a href="#login" class="md-nav__link">Login</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#dashboard" class="md-nav__link">Dashboard</a>
+        </li>
+        <li class="md-nav__item"><a href="#networks" class="md-nav__link">Networks</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#create" class="md-nav__link">Create</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#hosts" class="md-nav__link">Hosts</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#host-list" class="md-nav__link">Host List</a>
+        </li>
+        <li class="md-nav__item"><a href="#host-create" class="md-nav__link">Host Create</a>
+        </li>
+        <li class="md-nav__item"><a href="#host-details" class="md-nav__link">Host Details</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#nodes" class="md-nav__link">Nodes</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#node-list" class="md-nav__link">Node List</a>
+        </li>
+        <li class="md-nav__item"><a href="#create-egress" class="md-nav__link">Create Egress</a>
+        </li>
+        <li class="md-nav__item"><a href="#create-relay" class="md-nav__link">Create Relay</a>
+        </li>
+        <li class="md-nav__item"><a href="#edit-node-node-details" class="md-nav__link">Edit Node / Node Details</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#remote-access" class="md-nav__link">Remote Access</a>
+        </li>
+        <li class="md-nav__item"><a href="#dns" class="md-nav__link">DNS</a>
+        </li>
+        <li class="md-nav__item"><a href="#create-edit-users" class="md-nav__link">Create / Edit Users</a>
+        </li>
+        <li class="md-nav__item"><a href="#node-graph" class="md-nav__link">Node Graph</a>
+        </li>
+        <li class="md-nav__item"><a href="#access-control-lists" class="md-nav__link">Access Control Lists</a>
+        </li>
+  </ul>
+</nav>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="#signup" class="md-nav__link">Signup</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#login" class="md-nav__link">Login</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#dashboard" class="md-nav__link">Dashboard</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#networks" class="md-nav__link">Networks</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="#create" class="md-nav__link">Create</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#hosts" class="md-nav__link">Hosts</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="#host-list" class="md-nav__link">Host List</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#host-create" class="md-nav__link">Host Create</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#host-details" class="md-nav__link">Host Details</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#nodes" class="md-nav__link">Nodes</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="#node-list" class="md-nav__link">Node List</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#create-egress" class="md-nav__link">Create Egress</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#create-relay" class="md-nav__link">Create Relay</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#edit-node-node-details" class="md-nav__link">Edit Node / Node Details</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#remote-access" class="md-nav__link">Remote Access</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#dns" class="md-nav__link">DNS</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#create-edit-users" class="md-nav__link">Create / Edit Users</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#node-graph" class="md-nav__link">Node Graph</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#access-control-lists" class="md-nav__link">Access Control Lists</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="references.html#api" class="md-nav__link">API</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="api.html" class="md-nav__link">API Usage</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="api.html#authentication" class="md-nav__link">Authentication</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="api.html#format-of-calls-for-curl" class="md-nav__link">Format of Calls for <code class="docutils literal notranslate"><span class="pre">curl</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="api.html#api-documentation" class="md-nav__link">API Documentation</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="references.html#netclient" class="md-nav__link">Netclient</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html" class="md-nav__link">Netclient</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#installation" class="md-nav__link">Installation</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#linux" class="md-nav__link">Linux</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#debian-distros-debian-ubuntu-mint-pop-os" class="md-nav__link">Debian Distros (debian/ubuntu/mint/pop-os)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#red-hat-distros-fedora-redhat-centos-rocky" class="md-nav__link">Red Hat Distros (fedora/redhat/centos/rocky)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#arch-distros-arch-manjaro-endeavouros" class="md-nav__link">Arch Distros (arch/manjaro/endeavouros)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#openwrt-distros-mips-mipsle" class="md-nav__link">OpenWRT Distros (mips/mipsle)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#opensuse-tumbleweed-leap" class="md-nav__link">OpenSUSE (tumbleweed/leap)</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#windows" class="md-nav__link">Windows</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#msi-installer" class="md-nav__link">MSI Installer</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#mac" class="md-nav__link">Mac</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#brew-install" class="md-nav__link">Brew Install</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#gui-installer-for-v0-22-0-and-below" class="md-nav__link">GUI Installer (for v0.22.0 and below)</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#docker" class="md-nav__link">Docker</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#joining-a-network" class="md-nav__link">Joining a Network</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#managing-netclient" class="md-nav__link">Managing Netclient</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#connecting-disconnecting-from-a-network" class="md-nav__link">Connecting/Disconnecting from a network</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#leave-a-network" class="md-nav__link">Leave a network</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#list-networks" class="md-nav__link">List Networks</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#multi-server" class="md-nav__link">Multi-Server</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#use-a-different-version" class="md-nav__link">Use a different version</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="netclient.html#uninstalling" class="md-nav__link">Uninstalling</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="references.html#nmctl" class="md-nav__link">NMCTL</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl.html" class="md-nav__link">NMCTL</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl.html#quick-start" class="md-nav__link">Quick Start</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl.html#context" class="md-nav__link">Context</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl.html#connecting-to-standalone-self-hosted-tenants" class="md-nav__link">Connecting to standalone (self-hosted) tenants</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl.html#connecting-to-saas-managed-tenants" class="md-nav__link">Connecting to SaaS (managed) tenants</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl.html#list-and-switch-between-contexts" class="md-nav__link">List and switch between contexts</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl.html#delete-contexts" class="md-nav__link">Delete contexts</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl.html#network" class="md-nav__link">Network</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl.html#access-key" class="md-nav__link">Access Key</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl.html#nodes" class="md-nav__link">Nodes</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl.html#remote-access-clients" class="md-nav__link">Remote Access Clients</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl.html#acls" class="md-nav__link">ACLs</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl.html#list" class="md-nav__link">List</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl.html#allow-deny" class="md-nav__link">Allow/Deny</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl.html#help" class="md-nav__link">Help</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl-standalone.html" class="md-nav__link">NMCTL - how to use netmaker from command line</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl-standalone.html#assumptions" class="md-nav__link">Assumptions</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl-standalone.html#setup-superadmin-user" class="md-nav__link">Setup superadmin user</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl-standalone.html#set-base-domain" class="md-nav__link">Set base domain</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl-standalone.html#create-superadmin-user" class="md-nav__link">Create SuperAdmin User</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl-standalone.html#set-context" class="md-nav__link">Set Context</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl-standalone.html#create-admin-user" class="md-nav__link">Create Admin User</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl-standalone.html#create-normal-user" class="md-nav__link">Create Normal User</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl-standalone.html#normal-operations-by-user" class="md-nav__link">Normal Operations by user</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl-standalone.html#set-username-password" class="md-nav__link">Set username/password</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl-standalone.html#set-user-context" class="md-nav__link">Set User Context</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl-standalone.html#create-network" class="md-nav__link">Create Network</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl-standalone.html#create-enrollment-key" class="md-nav__link">Create Enrollment Key</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl-standalone.html#unlimited" class="md-nav__link">Unlimited</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl-standalone.html#limited-use-3" class="md-nav__link">Limited Use (3)</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl-standalone.html#with-expiration-time-2-days" class="md-nav__link">With Expiration Time (2 days)</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="nmctl-standalone.html#join-network" class="md-nav__link">Join network</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="references.html#faq" class="md-nav__link">FAQ</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="support.html" class="md-nav__link">FAQ</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="support.html#is-netmaker-a-vpn-like-nordvpn" class="md-nav__link">Is Netmaker a VPN like NordVPN?</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="support.html#do-you-have-an-exit-nodes-feature" class="md-nav__link">Do you have an ‘Exit Nodes’ feature?</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="support.html#do-you-offer-any-business-or-professional-support" class="md-nav__link">Do you offer any business or professional support?</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="support.html#telemetry" class="md-nav__link">Telemetry</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="support.html#contact" class="md-nav__link">Contact</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="references.html#troubleshooting" class="md-nav__link">Troubleshooting</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="troubleshoot.html" class="md-nav__link">Troubleshooting</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="troubleshoot.html#common-issues" class="md-nav__link">Common Issues</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="troubleshoot.html#server" class="md-nav__link">Server</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="troubleshoot.html#mq" class="md-nav__link">MQ</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="troubleshoot.html#ui" class="md-nav__link">UI</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="troubleshoot.html#netclient" class="md-nav__link">Netclient</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="troubleshoot.html#coredns" class="md-nav__link">CoreDNS</a>
+      
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="license.html" class="md-nav__link">License</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="conduct.html" class="md-nav__link">Code of Conduct</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="conduct.html#our-pledge" class="md-nav__link">Our Pledge</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="conduct.html#our-standards" class="md-nav__link">Our Standards</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="conduct.html#our-responsibilities" class="md-nav__link">Our Responsibilities</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="conduct.html#scope" class="md-nav__link">Scope</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="conduct.html#enforcement" class="md-nav__link">Enforcement</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="conduct.html#attribution" class="md-nav__link">Attribution</a>
+      
+    
+    </li></ul>
+    
+    </li>
+  </ul>
+  
+
+</nav>
+              </div>
+            </div>
+          </div>
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">"Contents"</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#ui-reference--page-root" class="md-nav__link">Authentication</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#signup" class="md-nav__link">Signup</a>
+        </li>
+        <li class="md-nav__item"><a href="#login" class="md-nav__link">Login</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#dashboard" class="md-nav__link">Dashboard</a>
+        </li>
+        <li class="md-nav__item"><a href="#networks" class="md-nav__link">Networks</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#create" class="md-nav__link">Create</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#hosts" class="md-nav__link">Hosts</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#host-list" class="md-nav__link">Host List</a>
+        </li>
+        <li class="md-nav__item"><a href="#host-create" class="md-nav__link">Host Create</a>
+        </li>
+        <li class="md-nav__item"><a href="#host-details" class="md-nav__link">Host Details</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#nodes" class="md-nav__link">Nodes</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#node-list" class="md-nav__link">Node List</a>
+        </li>
+        <li class="md-nav__item"><a href="#create-egress" class="md-nav__link">Create Egress</a>
+        </li>
+        <li class="md-nav__item"><a href="#create-relay" class="md-nav__link">Create Relay</a>
+        </li>
+        <li class="md-nav__item"><a href="#edit-node-node-details" class="md-nav__link">Edit Node / Node Details</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#remote-access" class="md-nav__link">Remote Access</a>
+        </li>
+        <li class="md-nav__item"><a href="#dns" class="md-nav__link">DNS</a>
+        </li>
+        <li class="md-nav__item"><a href="#create-edit-users" class="md-nav__link">Create / Edit Users</a>
+        </li>
+        <li class="md-nav__item"><a href="#node-graph" class="md-nav__link">Node Graph</a>
+        </li>
+        <li class="md-nav__item"><a href="#access-control-lists" class="md-nav__link">Access Control Lists</a>
+        </li>
+  </ul>
+</nav>
+              </div>
+            </div>
+          </div>
+        
+        <div class="md-content">
+          <article class="md-content__inner md-typeset" role="main">
+            
+  <p>This page contains annotated screenshots of most UI components, detailing the configuration options of each field across Nodes, Networks, DNS, Ext Clients, Users, and more.</p>
+<p><a class="reference external" href="https://app.arcade.software/share/Jdl7PnnqIbot3IkqvIaf">Here is an arcade showing a walkthrough of our new UI.</a></p>
+<section id="authentication">
+<h1 id="ui-reference--page-root">Authentication<a class="headerlink" href="#ui-reference--page-root" title="Permalink to this headline">¶</a></h1>
+<section id="signup">
+<h2 id="signup">Signup<a class="headerlink" href="#signup" title="Permalink to this headline">¶</a></h2>
+<p>When you start Netmaker for the first time, you will be prompted to create an admin account from the UI like below</p>
+<a class="reference internal image-reference" href="_images/ui-signup.png"><img alt="sign up" class="align-center" src="_images/ui-signup.png" style="width: 80%;"/></a>
+<ol class="arabic simple">
+<li><p><strong>Username:</strong> Enter a unique username for the admin user.</p></li>
+<li><p><strong>Password:</strong> Enter a secure password for your new user.</p></li>
+<li><p><strong>Password Confirmation:</strong> Repeat the password for verification.</p></li>
+<li><p><strong>Signup with OAuth:</strong> Button to signup with OAuth.</p></li>
+</ol>
+</section>
+<section id="login">
+<h2 id="login">Login<a class="headerlink" href="#login" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/ui-login.png"><img alt="log in" class="align-center" src="_images/ui-login.png" style="width: 80%;"/></a>
+<ol class="arabic simple">
+<li><p><strong>Username:</strong> Enter your username.</p></li>
+<li><p><strong>Password:</strong> Enter your password.</p></li>
+<li><p><strong>Login:</strong> Button to login.</p></li>
+<li><p><strong>Login with OAuth:</strong> Button to login with OAuth.</p></li>
+</ol>
+</section>
+</section>
+<section id="dashboard">
+<h1 id="dashboard">Dashboard<a class="headerlink" href="#dashboard" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="_images/ui-1.jpg"><img alt="dashboard" class="align-center" src="_images/ui-1.jpg" style="width: 80%;"/></a>
+</section>
+<section id="networks">
+<h1 id="networks">Networks<a class="headerlink" href="#networks" title="Permalink to this headline">¶</a></h1>
+<section id="create">
+<h2 id="create">Create<a class="headerlink" href="#create" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/ui-2.png"><img alt="create network" class="align-center" src="_images/ui-2.png" style="width: 80%;"/></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p><strong>Autofill:</strong> Provides sensible defaults for network details and makes up a name.</p></li>
+<li><p><strong>Network Name:</strong> The name of the network. Character limited, as this translates to the interface name on hosts (nm-&lt;network name&gt;)</p></li>
+<li><p><strong>Address Range:</strong> The CIDR of the network. Must be a valid IPv4 Subnet and should be a private address range.</p></li>
+<li><p><strong>Default Access Control:</strong> Indicates the default ACL value for a node when it joins in respect to it’s peers (enabled or disabled).</p></li>
+</ol>
+</section>
+</section>
+<section id="hosts">
+<h1 id="hosts">Hosts<a class="headerlink" href="#hosts" title="Permalink to this headline">¶</a></h1>
+<p>In simple terms, a host is a computer or machine running the netclient software. Netmaker UI allows an admin to conviniently view and configure some host settings remotely.</p>
+<section id="host-list">
+<h2 id="host-list">Host List<a class="headerlink" href="#host-list" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/hosts-list.png"><img alt="hosts list" class="align-center" src="_images/hosts-list.png" style="width: 80%;"/></a>
+<ol class="arabic simple">
+<li><p><strong>Host Name:</strong> Friendly name of the host. Clicking it opens a view to allow admins manage hosts.</p></li>
+<li><p><strong>Endpoint:</strong> The public IP address of the host.</p></li>
+<li><p><strong>Public Port:</strong> Public port of the host.</p></li>
+<li><p><strong>Version:</strong> Indicates the version of netclient the host is running.</p></li>
+<li><p><strong>Health Status:</strong> Indicates the connectivity of the host.</p></li>
+<li><p><strong>Sync:</strong> Synchronise the host with the server; this triggers the host to pull latest network/server state.</p></li>
+<li><p><strong>Actions:</strong> Quick actions that can be performed on the host.</p></li>
+</ol>
+</section>
+<section id="host-create">
+<h2 id="host-create">Host Create<a class="headerlink" href="#host-create" title="Permalink to this headline">¶</a></h2>
+<p>A host is automatically created on a server once a netclient (a machine running netclient) joins any network on the server.</p>
+</section>
+<section id="host-details">
+<h2 id="host-details">Host Details<a class="headerlink" href="#host-details" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/host-details.png"><img alt="host details" class="align-center" src="_images/host-details.png" style="width: 80%;"/></a>
+<p>The following information is present under the host details tab:</p>
+<ol class="arabic simple">
+<li><p><strong>ID:</strong> Unique identifier for the host</p></li>
+<li><p><strong>Name:</strong> Name of the host. Defaults to the machine’s name.</p></li>
+<li><p><strong>Version:</strong> Version of netclient the host is running.</p></li>
+<li><p><strong>Operating System:</strong> Operating system (OS) the machine is running.</p></li>
+<li><p><strong>Public Key:</strong> Public key of the host. distributed to other hosts.</p></li>
+<li><p><strong>MTU:</strong> Maximum Transmission Unit (MTU) of the host</p></li>
+<li><p><strong>Listen Port:</strong> The wiregaurd listen port.</p></li>
+<li><p><strong>Proxy Listen Port:</strong> The netclient proxy listen port. this is used if <cite>Proxy Enabled</cite> is set to <cite>true</cite>. (No longer available from v0.20.5)</p></li>
+<li><p><strong>Verbosity:</strong> Log verbosity (ranges from 1-4). Indicates level of detail the host (netclient) will output to logs.</p></li>
+<li><p><strong>Default Interface:</strong> Default network interface used by the host.</p></li>
+<li><p><strong>MAC Address:</strong> Media Access Control (MAC) address of the host machine.</p></li>
+<li><p><strong>Is Default:</strong> Indicates whether the host is a default node. Hosts that are default nodes will automatically join any created network.</p></li>
+<li><p><strong>Debug:</strong> Flag to enable additional logging on client.</p></li>
+<li><p><strong>Proxy Enabled:</strong> Indicates whether a host is running netclient proxy. (No longer available from v0.20.5)</p></li>
+<li><p><strong>Is Static:</strong> Indicaates whether the host’s endpoint is static or not.</p></li>
+<li><p><strong>Interfaces:</strong> Lists the available network interface for the host.</p></li>
+</ol>
+<p>A host can be deleted from the UI. All associated nodes must be manually removed however, before deleting a host.</p>
+<a class="reference internal image-reference" href="_images/host-nets.png"><img alt="host details" class="align-center" src="_images/host-nets.png" style="width: 80%;"/></a>
+</section>
+</section>
+<section id="nodes">
+<h1 id="nodes">Nodes<a class="headerlink" href="#nodes" title="Permalink to this headline">¶</a></h1>
+<section id="node-list">
+<h2 id="node-list">Node List<a class="headerlink" href="#node-list" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/nodes-1.png"><img alt="nodes list" class="align-center" src="_images/nodes-1.png" style="width: 80%;"/></a>
+<ol class="arabic simple">
+<li><p><strong>Search Hosts:</strong> Look up a host by name.</p></li>
+<li><p><strong>Host Name:</strong> Name of host. By default set to hostname of machine.</p></li>
+<li><p><strong>Private Addresses:</strong> Private IPs of host within network.</p></li>
+<li><p><strong>Public Address:</strong> Public IP of host.</p></li>
+<li><p><strong>Status:</strong> Indicates how recently the host checked into the server. Displays “Warning” after 5 minutes and “Error” after 30 minutes without a check in. Does <strong>not</strong> explicitly indicate the health of the node’s virtual network connections; however a healthy host will check-in regularly.</p></li>
+<li><p><strong>Actions:</strong> Dropdown list of actions that can be performed on a host, including disconnecting and deleting the host.</p></li>
+</ol>
+<p>A node pending deletion will be grayed out.</p>
+</section>
+<section id="create-egress">
+<h2 id="create-egress">Create Egress<a class="headerlink" href="#create-egress" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/ui-6.png"><img alt="dashboard" class="align-center" src="_images/ui-6.png" style="width: 80%;"/></a>
+<ol class="arabic simple">
+<li><p><strong>Egress Gateway Ranges:</strong> A comma-separated list of the subnets for which the gateway will route traffic. For instance, with Kubernetes this could be both the Service Network and Pod Network. For a standard VPN, Netmaker can use a list of the public CIDR’s (see the docs). Typically, this will be something like a data center network, VPC, or home network.</p></li>
+<li><p><strong>Interface:</strong> The interface on the machine used to access the provided egress gateway ranges. For instance, on a typical linux machine, the interface for public traffic would be “eth0”. Usually you will need to check on the machine first to find the right interface. For instance, on Linux, you can find the interface by running this: ip route get &lt;address in subnet&gt;.</p></li>
+</ol>
+</section>
+<section id="create-relay">
+<h2 id="create-relay">Create Relay<a class="headerlink" href="#create-relay" title="Permalink to this headline">¶</a></h2>
+<p>Check host section on <a class="reference internal" href="#hosts">hosts</a>. A relay can be created under host settings.</p>
+</section>
+<section id="edit-node-node-details">
+<h2 id="edit-node-node-details">Edit Node / Node Details<a class="headerlink" href="#edit-node-node-details" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/ui-5.jpg"><img alt="dashboard" class="align-center" src="_images/ui-5.jpg" style="width: 80%;"/></a>
+<a class="reference internal image-reference" href="_images/ui-5-5.png"><img alt="dashboard" class="align-center" src="_images/ui-5-5.png" style="width: 80%;"/></a>
+<ol class="arabic simple">
+<li><p><strong>Edit</strong> Edit the node’s details</p></li>
+<li><p><strong>ACLs</strong> View the node’s Access Control List (ACL)</p></li>
+<li><p><strong>Metrics</strong> View the node’s metrics</p></li>
+<li><p><strong>Host</strong> View the node’s associated host</p></li>
+<li><p><strong>Delete</strong> Delete the node</p></li>
+<li><p><strong>Endpoint:</strong> The (typically public) IP of the machine, which peers will use to reach it, in combination with the port. If changing this value, make sure Roaming is turned off, since otherwise, the node will check to see if there is a change in the public IP regularly and update it.</p></li>
+<li><p><strong>Dynamic Endpoint:</strong> The endpoint may be changed automatically. Switching this off (indicating static endpoint) means the endpoint will stay the same until you change it. This can be good to set if the machine is a server sitting in a location that is not expected to change. It is also good to have this switched off for Remote Access gateway, Egress, and Relay Servers, since they should be in a reliable location.</p></li>
+<li><p><strong>Listen Port:</strong> The port used by the node locally. <strong>This value is ignored if UDP Hole Punching is on,</strong> because port is set dynamically every time interface is created. If UDP Hole Punching is off, the port can be set to any reasonable (and available) value you’d like for the local machine.</p></li>
+<li><p><strong>IP Address:</strong> The primary private IP address of the node. Assigned automatically by Netmaker but can be changed to whatever you want within the Network CIDR.</p></li>
+<li><p><strong>IPv6 Address:</strong> (Only if running dual stack) the primary private IPv6 address of the node. Assigned automatically by Netmaker but can be changed to whatever you want within the Network CIDR.</p></li>
+<li><p><strong>Local Address:</strong> The “locally reachable” address of the node. Other nodes will take note of this to see if this node is on the same network. If so, they will use this address instead of the public “Endpoint.” If running a few nodes inside of a VPC, home network, or similar, make sure the local address is populated correctly for faster and more secure inter-node communication.</p></li>
+<li><p><strong>Node Name:</strong> The name of the node within the network. Hostname by default but can be anything (within the character limits).</p></li>
+<li><p><strong>Public Key:</strong> (Uneditable) The public key of the node, distributed to other peers in the network.</p></li>
+<li><p><strong>Persistent Keepalive:</strong> How often packets are sent to keep connections open with other peers.</p></li>
+<li><p><strong>Last Modified:</strong> Timestamp of the last time the node config was changed.</p></li>
+<li><p><strong>Node Expiration Datetime:</strong> If a node should become invalid after a length of time, you can set it in this field, after which time, it will lose access to the network and will not populate to other nodes. Useful for scenarios where temporary access is granted to 3rd parties.</p></li>
+<li><p><strong>Last Checkin:</strong> Unix timestamp of the last time the node checked in with the server. Used to determine generic health of node.</p></li>
+<li><p><strong>MAC Address:</strong> The hardware Media Access Control (MAC) address of the machine. Used to be used as the unique ID, but is being depreciated.</p></li>
+<li><p><strong>Egress Gateway Ranges:</strong> If Egress is enabled, the gateway ranges that this machine routes to.</p></li>
+<li><p><strong>Local Range:</strong> If IsLocal has been enabled on the network, this is the local range in which the node will look for a private address from it’s local interfaces, to use as an endpoint.</p></li>
+<li><p><strong>Node Operating System:</strong> The OS of the machine.</p></li>
+<li><p><strong>MTU:</strong> The MTU that the node will use on the interface. If “wg show” displays a valid handshake but pings are not working, many times the issue is MTU. Making this value lower can solve this issue. Some typical values are 1024, 1280, and 1420.</p></li>
+<li><p><strong>Network:</strong> The network this node belongs to.</p></li>
+<li><p><strong>Node ACL Rule</strong> The current ACL rule for this node in the network</p></li>
+<li><p><strong>Is DNS On:</strong> DNS is solely handled by resolvectl at the moment, which is on many Linux distributions. For anything else, this value should remain off. If you wish to configure DNS for non-compatible systems, you must do so manually.</p></li>
+<li><p><strong>Is Local:</strong> If on, will only communicate over the local address (Assumes IsLocal tuned to ‘yes’ on the network level.)</p></li>
+<li><p><strong>Connected</strong> Indicates whether the node has is connected to the network</p></li>
+</ol>
+</section>
+</section>
+<section id="remote-access">
+<h1 id="remote-access">Remote Access<a class="headerlink" href="#remote-access" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="_images/ui-8.jpg"><img alt="dashboard" class="align-center" src="_images/ui-8.jpg" style="width: 80%;"/></a>
+<ol class="arabic simple">
+<li><p><strong>Gateway Name / IP Address:</strong> Information about which Node is the Remote Access Gateway.</p></li>
+<li><p><strong>Add Client Config:</strong> Button to generate a new Remote Access Client configuration file.</p></li>
+<li><p><strong>Client ID:</strong> The randomly-generated name of the client. Click on the ID to change the name to something sensible.</p></li>
+<li><p><strong>IP Address:</strong> The private ip address of the ext client.</p></li>
+<li><p><strong>QR Code:</strong> If joining form iOS or Android, open the WireGuard app and scan the QR code to join the network.</p></li>
+<li><p><strong>Download Client Configuration:</strong> If joining from a laptop/desktop, download the config file and run “wg-quick up /path/to/config”</p></li>
+<li><p><strong>Delete:</strong> Delete the ext client and remove its network access.</p></li>
+</ol>
+</section>
+<section id="dns">
+<h1 id="dns">DNS<a class="headerlink" href="#dns" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="_images/ui-10.jpg"><img alt="dashboard" class="align-center" src="_images/ui-10.jpg" style="width: 80%;"/></a>
+<ol class="arabic simple">
+<li><p><strong>DNS Name:</strong> The private DNS entry. Must end in “.&lt;network name&gt;” (added automatically). This avoids conflicts between networks.</p></li>
+<li><p><strong>IP Address:</strong> The IP address of the entry. Can be anything (public addresses too!) but typically a node IP.</p></li>
+<li><p><strong>Select Node Address:</strong> Select a node name to populate its IP address automatically.</p></li>
+</ol>
+</section>
+<section id="create-edit-users">
+<h1 id="create-edit-users">Create / Edit Users<a class="headerlink" href="#create-edit-users" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="_images/ui-11.jpg"><img alt="dashboard" class="align-center" src="_images/ui-11.jpg" style="width: 80%;"/></a>
+<ol class="arabic simple">
+<li><p><strong>Username:</strong> Specify Username.</p></li>
+<li><p><strong>Password:</strong> Specify password.</p></li>
+<li><p><strong>Confirm Password:</strong> Confirm password.</p></li>
+<li><p><strong>Make Admin:</strong> Make into a server admin or “super admin”, which has access to all networks and server-level settings.</p></li>
+<li><p><strong>Networks:</strong> If not made into an “admin”, select the networks which this user has access to. The user will be a “network admin” of these networks, but other networks will be invisible/unaccessible.</p></li>
+</ol>
+</section>
+<section id="node-graph">
+<h1 id="node-graph">Node Graph<a class="headerlink" href="#node-graph" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="_images/node-graph-1.png"><img alt="dashboard" class="align-center" src="_images/node-graph-1.png" style="width: 80%;"/></a>
+<p>View all nodes in your network, zoom in, zoom out, and search for node names.
+<strong>hover:</strong> Hover over a node to see its direct connections.</p>
+</section>
+<section id="access-control-lists">
+<h1 id="access-control-lists">Access Control Lists<a class="headerlink" href="#access-control-lists" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="_images/acls-3.png"><img alt="ACLs" class="align-center" src="_images/acls-3.png" style="width: 80%;"/></a>
+<ol class="arabic simple">
+<li><p><strong>Reset:</strong> Reset your changes without submitting.</p></li>
+<li><p><strong>Allow All:</strong> Enable all p2p connections</p></li>
+<li><p><strong>Block All:</strong> Disable all p2p connections. Makes building up a Zero Trust network easier.</p></li>
+<li><p><strong>(allowed):</strong> Click to switch a connection to “deny.” Note that node names are higlighted on the side and top to track location.</p></li>
+<li><p><strong>(blocked):</strong> Click to switch a connection to “allow.”</p></li>
+<li><p><strong>Submit Changes:</strong> Click once you are ready to submit. Will send message to update relevant nodes in network.</p></li>
+</ol>
+</section>
+
+
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+          
+            <a href="references.html" title="References"
+               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+               rel="prev">
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+              </div>
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span
+                      class="md-footer-nav__direction"> "Previous" </span> References </span>
+              </div>
+            </a>
+          
+          
+            <a href="api.html" title="API Usage"
+               class="md-flex md-footer-nav__link md-footer-nav__link--next"
+               rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
+                class="md-flex__ellipsis"> <span
+                class="md-footer-nav__direction"> "Next" </span> API Usage </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink"><i
+                class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          
+        </a>
+        
+      </nav>
+    </div>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          <div class="md-footer-copyright__highlight">
+              &#169; Copyright 2023, Netmaker Inc..
+              
+          </div>
+            Created using
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
+             and
+            <a href="https://github.com/bashtage/sphinx-material/">Material for
+              Sphinx</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="_static/javascripts/application.js"></script>
+  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
+  </body>
+</html>
