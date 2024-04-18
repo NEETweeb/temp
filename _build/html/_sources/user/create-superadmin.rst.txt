@@ -1,0 +1,6 @@
+When you start Netmaker for the first time, you will be prompted to create a superadmin account from the UI like below. Input your username and a super memorable but strong password, then click on the `Sign up` button to create a superadmin account.
+
+.. image:: ../images/ui-signup.png
+   :width: 80%
+   :alt: sign up
+   :align: center
