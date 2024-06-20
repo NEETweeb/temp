@@ -1,0 +1,52 @@
+Jun 19 09:59:46 H8 systemd[1]: Starting netclient.service - Netclient Daemon...
+Jun 19 10:00:03 H8 systemd[1]: Started netclient.service - Netclient Daemon.
+Jun 19 10:00:03 H8 netclient[2669]: daemon called
+Jun 19 10:00:03 H8 netclient[2669]: [netclient] 2024-06-19 10:00:03 Starting firewall...
+Jun 19 10:00:03 H8 netclient[2669]: [netclient] 2024-06-19 10:00:03 iptables is supported
+Jun 19 10:00:04 H8 netclient[2669]: [netclient] 2024-06-19 10:00:04 adding forwarding rule
+Jun 19 10:00:04 H8 netclient[2669]: {"time":"2024-06-19T10:00:04.161752085Z","level":"ERROR","source":"daemon.go 220}","msg":"fail to pull config from server","error":"server config not found"}
+Jun 19 10:00:04 H8 netclient[2669]: [netclient] 2024-06-19 10:00:04 adding addresses to netmaker interface
+Jun 19 10:41:18 H8 systemd[1]: Stopping netclient.service - Netclient Daemon...
+Jun 19 10:41:18 H8 systemd[1]: netclient.service: Deactivated successfully.
+Jun 19 10:41:18 H8 systemd[1]: Stopped netclient.service - Netclient Daemon.
+Jun 19 10:41:49 H8 systemd[1]: Starting netclient.service - Netclient Daemon...
+Jun 19 10:42:06 H8 systemd[1]: Started netclient.service - Netclient Daemon.
+Jun 19 10:42:06 H8 netclient[3114]: daemon called
+Jun 19 10:42:06 H8 netclient[3114]: [netclient] 2024-06-19 10:42:06 Starting firewall...
+Jun 19 10:42:06 H8 netclient[3114]: [netclient] 2024-06-19 10:42:06 iptables is supported
+Jun 19 10:42:06 H8 netclient[3114]: [netclient] 2024-06-19 10:42:06 adding forwarding rule
+Jun 19 10:42:06 H8 netclient[3114]: {"time":"2024-06-19T10:42:06.587907824Z","level":"ERROR","source":"daemon.go 220}","msg":"fail to pull config from server","error":"server config not found"}
+Jun 19 10:42:06 H8 netclient[3114]: [netclient] 2024-06-19 10:42:06 adding addresses to netmaker interface
+Jun 19 11:24:04 H8 netclient[3114]: completed pull for server dentest.clustercat.com
+Jun 19 11:24:04 H8 netclient[3114]: [netclient] 2024-06-19 11:24:04 adding addresses to netmaker interface
+Jun 19 11:24:04 H8 netclient[3114]: [netclient] 2024-06-19 11:24:04 initialized endpoint detection on port 51821
+Jun 19 11:24:04 H8 netclient[3114]: [netclient] 2024-06-19 11:24:04 initialized endpoint detection on port 51821
+Jun 19 11:24:05 H8 netclient[3114]: [netclient] 2024-06-19 11:24:05 adding addresses to netmaker interface
+Jun 19 16:23:16 H8 netclient[3114]: [netclient] 2024-06-19 16:23:16 error occurred during publishing of metrics on node H8 cannot publish ... Mqclient not connected
+Jun 19 16:23:41 H8 systemd[1]: Stopping netclient.service - Netclient Daemon...
+Jun 19 16:23:41 H8 netclient[3114]: [netclient] 2024-06-19 16:23:41 checkin routine closed
+Jun 19 16:23:41 H8 netclient[3114]: [netclient] 2024-06-19 16:23:41 closed endpoint detection
+Jun 19 16:23:41 H8 netclient[3114]: [netclient] 2024-06-19 16:23:41 closed endpoint detection
+Jun 19 16:24:11 H8 netclient[3114]: {"time":"2024-06-19T16:24:11.505738108Z","level":"ERROR","source":"fail_over.go 108}","msg":"failed to get peer Info","error":"Post \"https://api.dentest.clustercat.com:443/api/hosts/adm/authenticate\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+Jun 19 16:24:34 H8 netclient[3114]: {"time":"2024-06-19T16:24:34.685890521Z","level":"ERROR","source":"mqhandlers.go 522}","msg":"pull failed","error":"Post \"https://api.dentest.clustercat.com:443/api/hosts/adm/authenticate\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+Jun 19 16:24:34 H8 systemd[1]: netclient.service: Deactivated successfully.
+Jun 19 16:24:34 H8 systemd[1]: Stopped netclient.service - Netclient Daemon.
+Jun 19 16:24:34 H8 systemd[1]: netclient.service: Consumed 1min 3.354s CPU time.
+-- Boot 9fb3f72333204a1a8b86f56cccc56f11 --
+Jun 20 11:49:45 H8 systemd[1]: Starting netclient.service - Netclient Daemon...
+Jun 20 11:50:02 H8 systemd[1]: Started netclient.service - Netclient Daemon.
+Jun 20 11:50:02 H8 netclient[987]: daemon called
+Jun 20 11:50:02 H8 netclient[987]: [netclient] 2024-06-20 11:50:02 Starting firewall...
+Jun 20 11:50:02 H8 netclient[987]: [netclient] 2024-06-20 11:50:02 iptables is supported
+Jun 20 11:50:02 H8 netclient[987]: [netclient] 2024-06-20 11:50:02 adding forwarding rule
+Jun 20 11:50:04 H8 netclient[987]: completed pull for server dentest.clustercat.com
+Jun 20 11:50:04 H8 netclient[987]: [netclient] 2024-06-20 11:50:04 adding addresses to netmaker interface
+Jun 20 11:50:04 H8 netclient[987]: [netclient] 2024-06-20 11:50:04 initialized endpoint detection on port 51821
+Jun 20 11:50:04 H8 netclient[987]: [netclient] 2024-06-20 11:50:04 initialized endpoint detection on port 51821
+Jun 20 18:55:04 H8 netclient[987]: [netclient] 2024-06-20 18:55:04 MQ client is not connected, using fallback checkin for server dentest.clustercat.com
+Jun 20 18:55:07 H8 netclient[987]: {"time":"2024-06-20T18:55:07.753109209Z","level":"ERROR","source":"fail_over.go 108}","msg":"failed to get peer Info","error":"Post \"https://api.dentest.clustercat.com:443/api/hosts/adm/authenticate\": dial tcp [2604:a880:400:d0::2568:5001]:443: connect: connection refused"}
+Jun 20 18:55:07 H8 netclient[987]: {"time":"2024-06-20T18:55:07.914865653Z","level":"ERROR","source":"mqhandlers.go 522}","msg":"pull failed","error":"Post \"https://api.dentest.clustercat.com:443/api/hosts/adm/authenticate\": dial tcp [2604:a880:400:d0::2568:5001]:443: connect: connection refused"}
+Jun 20 19:08:47 H8 netclient[987]: {"time":"2024-06-20T19:08:47.676092413Z","level":"ERROR","source":"fail_over.go 108}","msg":"failed to get peer Info","error":"Post \"https://api.dentest.clustercat.com:443/api/hosts/adm/authenticate\": read tcp [2a03:b0c0:1:d0::121a:d001]:33528->[2604:a880:400:d0::2568:5001]:443: read: connection reset by peer"}
+Jun 20 19:09:04 H8 netclient[987]: [netclient] 2024-06-20 19:09:04 MQ client is not connected, using fallback checkin for server dentest.clustercat.com
+Jun 20 19:09:11 H8 netclient[987]: {"time":"2024-06-20T19:09:11.929401747Z","level":"ERROR","source":"mqhandlers.go 522}","msg":"pull failed","error":"Post \"https://api.dentest.clustercat.com:443/api/hosts/adm/authenticate\": dial tcp [2604:a880:400:d0::2568:5001]:443: connect: connection refused"}
+Jun 20 19:09:18 H8 netclient[987]: {"time":"2024-06-20T19:09:18.950252391Z","level":"ERROR","source":"fail_over.go 108}","msg":"failed to get peer Info","error":"Post \"https://api.dentest.clustercat.com:443/api/hosts/adm/authenticate\": read tcp [2a03:b0c0:1:d0::121a:d001]:38782->[2604:a880:400:d0::2568:5001]:443: read: connection reset by peer"}
