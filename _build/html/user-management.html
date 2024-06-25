@@ -271,6 +271,16 @@
         </li>
         <li class="md-nav__item"><a href="#controlling-rac-user-sessions" class="md-nav__link">Controlling RAC user sessions</a>
         </li>
+        <li class="md-nav__item"><a href="#re-starting-the-service-daemon-process" class="md-nav__link">(Re)Starting the service/daemon process</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#manual-daemon-restart-on-windows" class="md-nav__link">Manual daemon restart on Windows</a>
+        </li>
+        <li class="md-nav__item"><a href="#manual-daemon-restart-on-linux" class="md-nav__link">Manual daemon restart on Linux</a>
+        </li>
+        <li class="md-nav__item"><a href="#manual-daemon-restart-on-mac" class="md-nav__link">Manual daemon restart on Mac</a>
+        </li></ul>
+            </nav>
+        </li>
         <li class="md-nav__item"><a href="#faqs-and-known-issues" class="md-nav__link">FAQs and Known Issues</a>
         </li></ul>
             </nav>
@@ -404,6 +414,16 @@
         <li class="md-nav__item"><a href="#using-netmaker-like-a-traditional-vpn" class="md-nav__link">Using Netmaker like a traditional VPN</a>
         </li>
         <li class="md-nav__item"><a href="#controlling-rac-user-sessions" class="md-nav__link">Controlling RAC user sessions</a>
+        </li>
+        <li class="md-nav__item"><a href="#re-starting-the-service-daemon-process" class="md-nav__link">(Re)Starting the service/daemon process</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#manual-daemon-restart-on-windows" class="md-nav__link">Manual daemon restart on Windows</a>
+        </li>
+        <li class="md-nav__item"><a href="#manual-daemon-restart-on-linux" class="md-nav__link">Manual daemon restart on Linux</a>
+        </li>
+        <li class="md-nav__item"><a href="#manual-daemon-restart-on-mac" class="md-nav__link">Manual daemon restart on Mac</a>
+        </li></ul>
+            </nav>
         </li>
         <li class="md-nav__item"><a href="#faqs-and-known-issues" class="md-nav__link">FAQs and Known Issues</a>
         </li></ul>
@@ -546,6 +566,38 @@ This can be done by setting <cite>RAC_AUTO_DISABLE</cite> (to <cite>true</cite>)
 <p>With <cite>RAC_AUTO_DISABLE</cite> set to true, a non-admin user’s remote sessions will be disabled after the duration specified in <cite>JWT_VALIDITY_DURATION</cite> has elapsed.
 The user will have to relogin to enable their remote session again.</p>
 <p>NOTE: The <cite>JWT_VALIDITY_DURATION</cite> environment variable also configures all the JWT token validity duration for all users, regardless of whether <cite>RAC_AUTO_DISABLE</cite> is set to <cite>true</cite> or not.</p>
+</section>
+<section id="re-starting-the-service-daemon-process">
+<h2 id="re-starting-the-service-daemon-process">(Re)Starting the service/daemon process<a class="headerlink" href="#re-starting-the-service-daemon-process" title="Permalink to this headline">¶</a></h2>
+<p>On very few occasion, the RAC daemon may not be running and will need to be restarted manually. there are two ways to resolve this:</p>
+<ol class="arabic simple">
+<li><p>Restart the computer. The daemon starts automatically on boot so restarting the computer will start the daemon on next startup.</p></li>
+<li><p>Manual restart. The extact procedure depends on your operating system.</p></li>
+</ol>
+<section id="manual-daemon-restart-on-windows">
+<h3 id="manual-daemon-restart-on-windows">Manual daemon restart on Windows<a class="headerlink" href="#manual-daemon-restart-on-windows" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Open Task Manager.</p></li>
+<li><p>Go to the “Services” tab.</p></li>
+<li><p>Look for the “remote-client” service.</p></li>
+<li><p>Right-click on the service and select “Restart” or “Start”.</p></li>
+</ol>
+</section>
+<section id="manual-daemon-restart-on-linux">
+<h3 id="manual-daemon-restart-on-linux">Manual daemon restart on Linux<a class="headerlink" href="#manual-daemon-restart-on-linux" title="Permalink to this headline">¶</a></h3>
+<p>On Linux, RAC daemon relies on systemd to manage the service. You can restart the service using the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">restart</span> <span class="n">remote</span><span class="o">-</span><span class="n">client</span>
+</pre></div>
+</div>
+</section>
+<section id="manual-daemon-restart-on-mac">
+<h3 id="manual-daemon-restart-on-mac">Manual daemon restart on Mac<a class="headerlink" href="#manual-daemon-restart-on-mac" title="Permalink to this headline">¶</a></h3>
+<p>On Mac, RAC daemon relies on launchd to manage the service. You can restart the service using the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">launchctl</span> <span class="n">stop</span> <span class="n">com</span><span class="o">.</span><span class="n">netmaker</span><span class="o">.</span><span class="n">remote</span><span class="o">-</span><span class="n">client</span>
+<span class="n">sudo</span> <span class="n">launchctl</span> <span class="n">start</span> <span class="n">com</span><span class="o">.</span><span class="n">netmaker</span><span class="o">.</span><span class="n">remote</span><span class="o">-</span><span class="n">client</span>
+</pre></div>
+</div>
+</section>
 </section>
 <section id="faqs-and-known-issues">
 <h2 id="faqs-and-known-issues">FAQs and Known Issues<a class="headerlink" href="#faqs-and-known-issues" title="Permalink to this headline">¶</a></h2>
